@@ -124,6 +124,7 @@
           ${lines(CS.title, "title serif", 1)}
           <p class="body r" style="--d:4">${fmt(CS.body)}</p>
           <div class="status r" style="--d:6">
+            ${CA.raised ? `<div class="row raised"><span class="upper muted">Déjà reversés</span><span><b>${CA.raised}</b> ${CS.raisedLabel}</span></div>` : ""}
             <div class="row"><span class="upper muted">Association</span><span>${CA.partnerName ? CA.partnerName : todo(CA.partnerStatus)}</span></div>
           </div>
           <p class="honesty r" style="--d:7">${fmt(CS.honesty)}</p>
@@ -194,7 +195,7 @@
   const cf = C.coffee;
   add("product", "black", S.product.nav, `
     <section class="slide s-product">
-      <div class="photo pack"><img src="${C.images.packBack}" alt="Paquet Maison YAKA 250 g : 100 % Arabica, Brésil, Pérou, Colombie, Éthiopie, torréfaction medium-dark, chocolaté, doux, gourmand"></div>
+      <div class="photo pack duo"><img src="${C.images.packBack}" alt="Sachet de café en grains Maison YAKA 250 g"><img src="${C.images.packCaps}" alt="Boîte de 20 capsules Maison YAKA"></div>
       <div class="info">
         ${label(next(), S.product.label)}
         ${lines(S.product.title, "title serif")}
@@ -202,11 +203,10 @@
         <p class="promise r" style="--d:5">${fmt(S.product.promise)}</p>
         <div class="specs r" style="--d:6">
           <dl>
+            ${cf.products.map((pr) => `<dt>${pr.name}</dt><dd>${pr.format} · <b class="price">${pr.price}</b></dd>`).join("")}
             <dt>Café</dt><dd>${cf.type} · ${cf.blend.toLowerCase()}</dd>
-            <dt>Origines</dt><dd>${cf.origins}</dd>
+            <dt>Origines</dt><dd>${cf.originsRole}</dd>
             <dt>Torréfaction</dt><dd>${cf.roast}</dd>
-            <dt>Format</dt><dd>${cf.form} · ${cf.weight} · ${cf.price}</dd>
-            <dt>Usage</dt><dd>${cf.usage}</dd>
           </dl>
         </div>
       </div>

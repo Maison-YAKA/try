@@ -1020,3 +1020,28 @@ body[data-slide="cover"] .brandmark { opacity: 0; pointer-events: none; }
 
 @media print { .s-model .head .upper.muted, .s-cause .range span { visibility: hidden; } }
 .s-product .specs dl { grid-template-columns: max-content 1fr; column-gap: calc(var(--u) * 2.4); } .s-product .specs dt { padding-right: 0; white-space: nowrap; }
+
+/* ---------- Fonctionnement : chapeau + étapes -------------------------- */
+.s-turnkey .lead { margin-top: calc(var(--u) * 1.6); max-width: 46em; font-size: var(--fs-s); line-height: 1.45; color: var(--fg-70); }
+.s-turnkey .big li b { font-family: var(--sans); font-weight: 600; font-size: .62em; letter-spacing: .14em; text-transform: uppercase; margin-right: .7em; color: var(--fg-70); }
+.s-turnkey .big li.us b { color: #9A7440; }
+
+/* ---------- Engagement : ce que devient un emplacement ----------------- */
+.s-cause .gift { align-self: center; border-left: 1px solid var(--fg-10); padding-left: calc(var(--u) * 4.4); }
+.s-cause .gift .quote { font-weight: 300; font-size: calc(var(--u) * 2.9); line-height: 1.12; color: var(--fg); }
+.s-cause .gift ul { list-style: none; margin-top: calc(var(--u) * 3); }
+.s-cause .gift li { display: grid; grid-template-columns: 1fr auto; gap: 1.2em; align-items: baseline; padding: calc(var(--u) * 1.1) 0; border-top: 1px solid var(--fg-10); }
+.s-cause .gift li:last-child { border-bottom: 1px solid var(--fg-10); }
+.s-cause .gift li b { font-weight: 300; font-size: calc(var(--u) * 2.1); color: #F5D4A5; }
+.s-cause .gift li span { font-size: var(--fs-s); color: var(--fg-70); text-align: right; }
+@media (max-width: 900px), (max-aspect-ratio: 4/5) {
+  .s-turnkey .lead { font-size: 16px; margin-top: 16px; }
+  .s-cause .gift { border-left: 0; padding-left: 0; border-top: 1px solid var(--fg-10); padding-top: 32px; }
+  .s-cause .gift .quote { font-size: 26px; }
+  .s-cause .gift li { grid-template-columns: 1fr; gap: 4px; }
+  .s-cause .gift li b { font-size: 22px; }
+  .s-cause .gift li span { text-align: left; font-size: 14px; }
+}
+.s-cause .title { font-size: calc(var(--u) * 4.3); line-height: 1.02; }
+.s-turnkey .cols { margin-top: calc(var(--u) * 3.2); }
+@media (max-width: 900px), (max-aspect-ratio: 4/5) { .s-cause .title { font-size: 38px; } .s-turnkey .cols { margin-top: 32px; } }

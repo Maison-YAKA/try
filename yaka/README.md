@@ -1,9 +1,10 @@
 # YAKA — Présentation partenaires
 
 Présentation interactive (13 écrans) + export PDF 16:9, version générique pour tous les magasins.
-Ordre : couverture → chacun y gagne (cercle) → engagement (1 € par produit, simulateur) → histoire → clé en main → quatre terres → café (grains + capsules) → étudiants → terrain → samedi en rayon → proposition → fondateurs → contact.
+Ordre : couverture → chacun y gagne (cercle) → fonctionnement (« Vous nous accueillez. Nous nous occupons du reste. », 5 étapes) → engagement (en construction) → histoire → quatre terres → café (grains + capsules) → étudiants → terrain → stand en magasin → proposition (première date) → fondateurs → contact.
 
-Contenu aligné sur maison-yaka.fr (grains 250 g et 20 capsules à 14,90 €, 1 € par produit, 1 160 € déjà reversés, stand du samedi, kit de merchandising).
+Informations café confirmées uniquement : 100 % Arabica, Brésil · Pérou · Colombie · Éthiopie, medium-dark, profil doux et chocolaté, grains 250 g et 20 capsules à 14,90 €.
+Engagement autour de la surdité présenté comme **en construction** : aucun montant, pourcentage ni partenaire n’est annoncé tant que rien n’est officialisé.
 
 ## Livrables
 - `dist/YAKA_presentation.html` : fichier unique et autonome (images et polices incluses), fonctionne hors ligne.
@@ -14,7 +15,7 @@ Tout se trouve dans **`content.js`** : textes, prix, chiffres terrain, café, as
 - `[[texte]]` → s'affiche comme élément à compléter (souligné pointillé doré).
 - `image: null` → un emplacement photo s'affiche à la place.
 - Contacts : renseigner `phone` / `email` dans `founders`, et `ctaEmail` pour le bouton final.
-- Association : renseigner `cause.partnerName` quand le partenariat est officiel ; `cause.perPack` = € reversés par paquet.
+- Engagement : renseigner `cause.partnerName` uniquement quand un partenariat est officiel.
 - Version personnalisée pour un magasin : `partner: { name: "…", city: "…" }` (laisser `null` pour la version générique).
 
 Puis reconstruire :

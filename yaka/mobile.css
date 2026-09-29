@@ -176,3 +176,20 @@ a { color: inherit; }
 
 .eq.one { grid-template-columns: 1fr; }
 .eq.one b { font-size: 56px; }
+
+/* Chacun y gagne : textes complets, plus compacts */
+.c-gains .gain { grid-template-columns: 84px 1fr; padding: 11px 0; }
+.c-gains .gain span { font-size: 15.5px; line-height: 1.28; }
+/* Fonctionnement : cinq étapes */
+.steps li { font-size: 15px; padding: 9px 0 9px 26px; border-top: 1px solid rgba(28,36,24,.12); }
+.steps li:last-child { border-bottom: 1px solid rgba(28,36,24,.12); }
+.steps li::before { top: 12px; }
+.steps li b { font-size: 10px; letter-spacing: .2em; text-transform: uppercase; font-weight: 600; margin-right: 6px; }
+/* Engagement */
+.c-engage .gain { grid-template-columns: 1fr; gap: 2px; border-color: rgba(245,240,230,.18); padding: 10px 0; }
+.c-engage .gain span { color: var(--gold); font-size: 22px; font-style: normal; }
+.c-engage .gain b { opacity: .7; }
+@media (max-height: 740px) {
+  .c-gains .gain span { font-size: 14px; } .c-gains .gain { padding: 8px 0; }
+  .steps li { font-size: 14px; padding: 7px 0 7px 26px; }
+}

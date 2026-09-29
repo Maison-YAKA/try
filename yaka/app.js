@@ -320,7 +320,7 @@
     <section class="slide s-cta kaki">
       <div class="bg">${C.images.hero ? `<img src="${C.images.hero}" alt="">` : ""}</div>
       <div class="label r"><span class="num">${String(next()).padStart(2, "0")}</span><span class="rule"></span><span>${partnerLabel}</span></div>
-      <div class="sign r" style="--d:2"><span class="logo gold" role="img" aria-label="YAKA" style="height:calc(var(--u)*2.4)"></span><div class="upper muted" style="margin-top:.6em">${fmt(S.cover.tagline.replace("\n", " "))}</div></div>
+      <div class="sign r" style="--d:2"><span class="logo gold" role="img" aria-label="YAKA" style="height:calc(var(--u)*3.6)"></span><div class="upper muted" style="margin-top:.6em">${fmt(S.cover.tagline.replace("\n", " "))}</div></div>
       ${lines(S.cta.title, "title serif", 1)}
       <p class="body r" style="--d:4">${fmt(S.cta.body)}</p>
       <div class="actions">

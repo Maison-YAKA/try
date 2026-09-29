@@ -14,7 +14,7 @@
     ["dark", "cover", `
       <div class="bg"><img src="${I.packFront}" alt="Paquet de café YAKA sur des rochers et des grains de café"></div>
       <div class="body stack">
-        <p ${a(2)}><span class="eyebrow">Animation café solidaire</span></p>
+        <p ${a(2)}><span class="eyebrow">Maison YAKA · Café solidaire</span></p>
         <h1 ${a(3)}><span class="h">Un grand café.<br><em>Un geste qui compte.</em></span></h1>
         <p ${a(5)}><span class="p">Chaque samedi, un étudiant fait découvrir YAKA dans vos allées. Chaque paquet vendu soutient les personnes sourdes et malentendantes.</span></p>
         <p ${a(8)}><span class="hint">Touchez pour découvrir <i></i></span></p>

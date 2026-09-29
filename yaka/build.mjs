@@ -43,7 +43,7 @@ const art = html
   .replace(/<meta[^>]*>\s*/gi, "")
   .replace(/<body[^>]*>/i, '<script>window.YAKA_NO_PRINT = true;</script>')
   .replace(/<\/body>\s*/i, "")
-  .replace(/<title>[^<]*<\/title>/, "<title>Présentation YAKA</title>");
+  .replace(/<title>[^<]*<\/title>/, "<title>Présentation Maison YAKA</title>");
 fs.mkdirSync(path.join(dist, "artifact"), { recursive: true });
 fs.writeFileSync(path.join(dist, "artifact", "yaka.html"), art);
 

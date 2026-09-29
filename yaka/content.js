@@ -18,7 +18,7 @@ window.YAKA_CONTENT = {
   /* ---------- Général ---------------------------------------------------- */
   meta: {
     brand: "YAKA",
-    documentTitle: "YAKA — L’animation café solidaire pour votre magasin",
+    documentTitle: "Maison YAKA — L’animation café solidaire pour votre magasin",
     edition: "Animation café solidaire · Présentation magasins",
     audience: "Magasins partenaires",
   },
@@ -94,7 +94,7 @@ window.YAKA_CONTENT = {
       nav: "YAKA",
       tagline: "L’animation café solidaire,\nclé en main.",
       promise: "1 paquet vendu = 1 € reversé\naux personnes sourdes et malentendantes.",
-      eyebrow: "Animation café solidaire · Présentation magasins",
+      eyebrow: "Maison YAKA · Animation café solidaire",
       headline: "Un grand café.\nUn geste qui compte.",
       lead: "Chaque samedi, un étudiant fait découvrir YAKA dans vos allées. Chaque paquet vendu soutient les personnes sourdes et malentendantes.",
       facts: [
@@ -145,7 +145,7 @@ window.YAKA_CONTENT = {
       nav: "L’association",
       label: "L’association",
       title: "1 paquet vendu,\n1 € reversé.",
-      body: "À chaque paquet de café YAKA vendu, 1 € est reversé à une association qui accompagne les personnes sourdes et malentendantes.",
+      body: "À chaque paquet de café Maison YAKA vendu, 1 € est reversé à une association qui accompagne les personnes sourdes et malentendantes.",
       example: "paquets vendus",
       exampleResult: "reversés à l’association",
       simLabel: "Faites glisser pour simuler",
@@ -225,7 +225,7 @@ window.YAKA_CONTENT = {
       nav: "Qui sommes-nous",
       label: "Qui sommes-nous",
       title: "Deux entrepreneurs.\nLe goût du terrain.\nUne cause à servir.",
-      body: "Yanil et Arthur ont créé YAKA. En magasin, ce sont des étudiants qui présentent le café et racontent la cause à vos clients : Yanil et Arthur les recrutent, les forment et les accompagnent.\n\nYAKA réunit un bon produit, une vente humaine et une cause qui touche les fondateurs de près.",
+      body: "Yanil et Arthur ont créé Maison YAKA. En magasin, ce sont des étudiants qui présentent le café et racontent la cause à vos clients : Yanil et Arthur les recrutent, les forment et les accompagnent.\n\nMaison YAKA réunit un bon produit, une vente humaine et une cause qui touche les fondateurs de près.",
     },
 
     cta: {

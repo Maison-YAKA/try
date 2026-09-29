@@ -41,9 +41,10 @@ window.YAKA_CONTENT = {
 
   images: {
     packaging: "assets/paquet.webp",        // paquet seul (fond de l’écran contact)
-    hero: "assets/hero.webp",               // visuel de couverture (paquet, montagnes au coucher du soleil)
+    hero: "assets/recolte.webp",            // couverture : récolte vue du ciel (comme maison-yaka.fr)
+    terroir: "assets/terroir.webp",         // panorama des terres d’origine
     logoGold: "assets/logo-or.webp",        // logo Maison YAKA doré
-    packFront: "assets/hero-mobile.webp",   // couverture sur téléphone
+    packFront: "assets/recolte-mobile.webp", // couverture sur téléphone
     packBack: "assets/pack-grains.webp",    // sachet de grains 250 g (détouré)
     packCaps: "assets/pack-capsules.webp",  // boîte de 20 capsules (détourée)
     beans: "assets/recolte.webp",           // récolte des cerises de café, vue aérienne
@@ -149,7 +150,7 @@ window.YAKA_CONTENT = {
     },
 
     cause: {
-      nav: "L’engagement",
+      nav: "Écouter, vraiment",
       label: "Notre engagement",
       title: "Chaque tasse\nfait un geste.",
       body: "1 € est reversé sur chaque produit acheté, chaque jour, sans exception, pour accompagner et équiper les personnes sourdes et malentendantes.",
@@ -164,16 +165,18 @@ window.YAKA_CONTENT = {
     deaf: {
       nav: "Notre histoire",
       label: "Notre histoire",
-      lead: "Maison YAKA ne commence pas par un café.",
-      title: "Elle commence\npar un silence.",
+      lead: "Un café se choisit. Une cause se vit.",
+      title: "Maison YAKA commence\npar un silence.",
       body: "L’un des fondateurs a grandi avec un frère sourd. Les conversations qui s’arrêtent net au milieu d’un repas, l’isolement discret du quotidien. Le café est l’un des rares moments où l’on se fait face : on peut lire sur les lèvres, suivre un regard, répondre avec les mains.",
       closing: "« On n’a pas voulu créer une marque de café qui soutient une cause. On a voulu créer une cause qui se sert du café pour exister. »",
     },
 
     interlude: {
-      nav: "Concrètement",
-      label: "Concrètement",
-      title: "Et sur place,\ncomment ça se passe ?",
+      nav: "Quatre terres",
+      label: "Quatre terres",
+      title: "Quatre terres.\nUn même équilibre.",
+      notes: "Cacao · Noisette · Rond",
+      origins: [["Brésil", "la rondeur"], ["Colombie", "l’équilibre"], ["Pérou", "la douceur"], ["Éthiopie", "le parfum"]],
     },
 
     product: {

@@ -988,3 +988,32 @@ body[data-slide="cover"] .brandmark { opacity: 0; pointer-events: none; }
   .s-product .title, .s-pilot .title { font-size: 40px; }
   .s-meeting .lines3 .l { font-size: 32px; }
 }
+
+/* Quatre terres */
+.s-terroir { display: flex; flex-direction: column; color: #F2F0E8; }
+.s-terroir .bg { position: absolute; inset: 0; }
+.s-terroir .bg img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.06); transition: transform 6s var(--ease); }
+.s-terroir.in .bg img { transform: none; }
+.s-terroir .bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,9,7,.55) 0%, rgba(10,9,7,.15) 40%, rgba(10,9,7,.75) 100%); }
+.s-terroir > *:not(.bg) { position: relative; }
+.s-terroir .title { font-size: calc(var(--u) * 6); line-height: 1; margin-top: calc(var(--u) * 2.4); }
+.s-terroir .notes { margin-top: calc(var(--u) * 1.6); color: #F5D4A5; }
+.s-terroir .origins { list-style: none; margin-top: auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: calc(var(--u) * 3); border-top: 1px solid rgba(242,240,232,.25); padding-top: calc(var(--u) * 1.6); }
+.s-terroir .origins b { display: block; font-weight: 300; font-size: calc(var(--u) * 2.6); }
+.s-terroir .origins span { font-family: var(--serif); font-style: italic; font-size: calc(var(--u) * 1.4); color: rgba(242,240,232,.75); }
+@media (max-width: 900px), (max-aspect-ratio: 4/5) {
+  .s-terroir { min-height: 100svh; }
+  .s-terroir .title { font-size: 42px; }
+  .s-terroir .origins { grid-template-columns: 1fr 1fr; gap: 18px; }
+  .s-terroir .origins b { font-size: 26px; } .s-terroir .origins span { font-size: 16px; }
+}
+@media print { .s-terroir .bg img { transform: none !important; } }
+/* Couverture récolte : lisibilité du texte sur le feuillage */
+.s-cover .photo.hero img { object-position: 50% 50%; }
+.s-cover .photo.hero::after { background:
+  linear-gradient(90deg, rgba(10,9,7,.82) 0%, rgba(10,9,7,.55) 38%, rgba(10,9,7,.1) 65%),
+  linear-gradient(0deg, rgba(10,9,7,.9) 0%, rgba(10,9,7,.4) 22%, rgba(10,9,7,0) 45%) !important; }
+.s-cover .photo.hero::after { background:
+  linear-gradient(90deg, rgba(10,9,7,.92) 0%, rgba(10,9,7,.78) 34%, rgba(10,9,7,.25) 62%, rgba(10,9,7,0) 80%),
+  linear-gradient(0deg, rgba(10,9,7,.95) 0%, rgba(10,9,7,.5) 20%, rgba(10,9,7,0) 42%) !important; }
+.s-cover .photo.hero img { object-position: 70% 50% !important; }

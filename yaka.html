@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<script>if (!/[?&](desktop|print)/.test(location.search) && matchMedia("(max-width: 820px) and (orientation: portrait)").matches) location.replace("yaka-mobile.html" + location.hash);</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>if (!/[?&](desktop|print)/.test(location.search) && (matchMedia("(max-width: 820px) and (orientation: portrait)").matches || (screen.width <= 820 && screen.height > screen.width))) location.replace("yaka-mobile.html" + location.hash);</script>
 <meta name="theme-color" content="#050505">
 <meta name="description" content="YAKA — un café qui a du goût, un projet qui a du sens. Présentation partenaires.">
 <title>YAKA — Présentation partenaires</title>

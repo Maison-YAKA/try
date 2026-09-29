@@ -124,7 +124,7 @@
           ${lines(CS.title, "title serif", 1)}
           <p class="body r" style="--d:4">${fmt(CS.body)}</p>
           <div class="status r" style="--d:6">
-            ${CA.raised ? `<div class="row raised"><span class="upper muted">Déjà reversés</span><span><b>${CA.raised}</b> ${CS.raisedLabel}</span></div>` : ""}
+            ${CA.raised ? `<div class="row raised"><span class="upper muted">Déjà collectés</span><span><b>${CA.raised}</b> ${CS.raisedLabel}</span></div>` : ""}
             <div class="row"><span class="upper muted">Association</span><span>${CA.partnerName ? CA.partnerName : todo(CA.partnerStatus)}</span></div>
           </div>
           <p class="honesty r" style="--d:7">${fmt(CS.honesty)}</p>
@@ -208,7 +208,7 @@
           <dl>
             ${cf.products.map((pr) => `<dt>${pr.name}</dt><dd>${pr.format} · <b class="price">${pr.price}</b></dd>`).join("")}
             <dt>Café</dt><dd>${cf.type} · ${cf.blend.toLowerCase()}</dd>
-            <dt>Origines</dt><dd>${cf.originsRole}</dd>
+            <dt>Fraîcheur</dt><dd>Sachet à valve dégazante · capsules operculées une à une</dd>
             <dt>Torréfaction</dt><dd>${cf.roast}</dd>
           </dl>
         </div>
@@ -227,7 +227,7 @@
           <div class="skills r" style="--d:7">${S.people.skills.map((s) => `<span>${s}</span>`).join("")}</div>
         </div>
         <div class="right">
-          <div class="frame r-fade" style="--d:2">${photo(C.images.student, S.people.photoCaption, "Étudiant YAKA en magasin")}</div>
+          <div class="frame r-fade" style="--d:2">${photo(C.images.student, S.people.photoCaption, "Étudiant Maison YAKA au stand")}</div>
           <p class="quote serif italic r" style="--d:8">${fmt(S.people.quote)}</p>
           <p class="muted t-s r" style="--d:9;font-size:var(--fs-body)">${fmt(S.people.network)}</p>
         </div>
@@ -271,7 +271,7 @@
           <div class="qual r" style="--d:8">${S.meeting.qualities.map((q) => `<span>${q}</span>`).join("")}</div>
         </div>
         <div class="right">
-          ${C.images.onsite ? `<div class="frame r-fade" style="--d:2">${photo(C.images.onsite, "", "Étudiant YAKA en magasin")}</div>` : ""}
+          ${C.images.onsite ? `<div class="frame r-fade" style="--d:2">${photo(C.images.onsite, "", "Le stand Maison YAKA en magasin")}</div>` : ""}
           <h4 class="upper muted r" style="--d:3">${S.meeting.optionsTitle}</h4>
           <div class="options">${S.meeting.options.map(([h, t], i) => `<div class="opt r" style="--d:${4 + i}"><em>${String.fromCharCode(65 + i)}</em><b class="serif">${h}</b><p>${fmt(t)}</p></div>`).join("")}</div>
         </div>
@@ -318,7 +318,7 @@
     </section>`);
 
   // Call to action
-  const mail = C.ctaEmail ? `mailto:${C.ctaEmail}?subject=${encodeURIComponent("Un samedi YAKA" + (PT ? " — " + partnerLabel : ""))}` : "#contacts";
+  const mail = C.ctaEmail ? `mailto:${C.ctaEmail}?subject=${encodeURIComponent("Un samedi Maison YAKA" + (PT ? " — " + partnerLabel : ""))}` : "#contacts";
   add("cta", "kaki", S.cta.nav, `
     <section class="slide s-cta kaki">
       <div class="bg">${C.images.hero ? `<img src="${C.images.hero}" alt="">` : ""}</div>

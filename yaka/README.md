@@ -1,7 +1,7 @@
 # YAKA — Présentation partenaires
 
 Présentation interactive (13 écrans) + export PDF 16:9, version générique pour tous les magasins.
-Ordre : bénéfices magasin → association (1 paquet = 1 €, simulateur) → pourquoi cette cause → clé en main → une journée → café → étudiants → terrain → sur place (avec ou sans table) → proposition → fondateurs → contact.
+Ordre : couverture → chacun y gagne (cercle) → engagement (1 € par produit, simulateur) → histoire → clé en main → quatre terres → café (grains + capsules) → étudiants → terrain → samedi en rayon → proposition → fondateurs → contact.
 
 Contenu aligné sur maison-yaka.fr (grains 250 g et 20 capsules à 14,90 €, 1 € par produit, 1 160 € déjà reversés, stand du samedi, kit de merchandising).
 

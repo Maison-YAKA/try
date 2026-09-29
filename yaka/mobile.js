@@ -14,48 +14,45 @@
     ["dark", "cover", `
       <div class="bg"><img src="${I.packFront}" alt="Paquet de café YAKA sur des rochers et des grains de café"></div>
       <div class="body stack">
-        <p ${a(2)}><span class="eyebrow">Maison YAKA · Café solidaire</span></p>
+        <p ${a(2)}><span class="eyebrow">${fmt(S.cover.eyebrow)}</span></p>
         <h1 ${a(3)}><span class="h">Un grand café.<br><em>Un geste qui compte.</em></span></h1>
-        <p ${a(5)}><span class="p">Chaque samedi, nos étudiants font déguster Maison YAKA dans vos allées. Chaque produit acheté reverse 1 € aux personnes sourdes et malentendantes.</span></p>
+        <p ${a(5)}><span class="p">${fmt(S.cover.lead)}</span></p>
         <p ${a(8)}><span class="hint">Touchez pour découvrir <i></i></span></p>
       </div>`],
 
-    // 2 · 1 produit = 1 €
-    ["kaki", "euro", `
-      <p ${a(1)}><span class="eyebrow">Notre engagement</span></p>
-      <div class="grow"></div>
-      <div ${a(2)}><div class="big">${C.cause.perPack}<small>&#8239;€</small></div></div>
-      <h2 ${a(3)} style="margin-top:18px"><span class="h" style="font-size:34px">reversé sur chaque produit acheté.</span></h2>
-      <p ${a(4)} style="margin-top:14px"><span class="p">Chaque jour, sans exception, pour accompagner et équiper les personnes sourdes et malentendantes.</span></p>
-      <div class="grow"></div>
-      <div ${a(6)}><div class="eq one"><div><b style="color:var(--gold)">${C.cause.raised}</b><span>déjà collectés pour la cause</span></div></div></div>
-      <p ${a(7)} style="margin-top:18px"><span class="small">L’association bénéficiaire est en cours de sélection et sera présentée très bientôt.</span></p>`],
-
-    // 3 · Notre histoire
-    ["ivory", "deaf", `
-      ${I.ear ? `<div class="ear a" style="--d:1"><img src="${I.ear}" alt="Une oreille dessinée par une foule"></div>` : ""}
-      <div class="grow"></div>
-      <div class="stack">
-        <p ${a(2)}><span class="eyebrow">${fmt(S.deaf.lead)}</span></p>
-        <h2 ${a(3)}><span class="h">${fmt(S.deaf.title)}</span></h2>
-        <p ${a(5)}><span class="p">L’un des fondateurs a grandi avec un frère sourd. Le café est l’un des rares moments où l’on se fait face : on peut lire sur les lèvres, suivre un regard, répondre avec les mains.</span></p>
-      </div>`],
-
-    // 4 · Chacun y gagne
+    // 2 · Chacun y gagne
     ["sand", "gains", `
       <p ${a(1)}><span class="eyebrow">${S.model.label}</span></p>
       <h2 ${a(2)} style="margin-top:14px"><span class="h">Chacun y gagne,<br><em>à commencer par vous.</em></span></h2>
       <div class="grow"></div>
       <div ${a(4)}>${S.model.nodes.map((n) => `<div class="gain"><b>${n.name}</b><span>${n.gets}</span></div>`).join("")}</div>`],
 
-    // 5 · Clé en main
+    // 3 · Fonctionnement
     ["ivory", "turnkey", `
-      <p ${a(1)}><span class="eyebrow">Clé en main</span></p>
-      <h2 ${a(2)} style="margin-top:14px"><span class="h">Nous apportons tout.<br><em>Vous ouvrez la porte.</em></span></h2>
+      <p ${a(1)}><span class="eyebrow">${S.turnkey.label}</span></p>
+      <h2 ${a(2)} style="margin-top:14px"><span class="h">Vous nous accueillez.<br><em>Nous nous occupons du reste.</em></span></h2>
+      <p ${a(3)} style="margin-top:14px"><span class="p">${fmt(S.turnkey.lead)}</span></p>
       <div class="grow"></div>
-      <div class="two">
-        <div ${a(4)}><div class="box us"><h4>Maison YAKA apporte</h4><ul>${S.turnkey.yaka.map((x) => `<li>${fmt(x.replace(" : display de comptoir, fiches origines, argumentaire", ""))}</li>`).join("")}</ul></div></div>
-        <div ${a(5)}><div class="box you"><h4>Vous</h4><ul><li>Un emplacement dans une allée passante</li><li>Le samedi (et d’autres jours si vous voulez)</li></ul></div></div>
+      <ul class="a ask steps" style="--d:4">${S.turnkey.yaka.map((x, i) => `<li data-n="0${i + 1}"><b>${x.who}</b> ${x.what}</li>`).join("")}</ul>
+      <p ${a(5)} style="margin-top:14px"><span class="small">${fmt(S.turnkey.note)}</span></p>`],
+
+    // 4 · Notre engagement
+    ["kaki", "engage", `
+      <p ${a(1)}><span class="eyebrow">${S.cause.label}</span></p>
+      <h2 ${a(2)} style="margin-top:14px"><span class="h" style="font-size:32px">Votre magasin prend part<br><em>à notre engagement.</em></span></h2>
+      <p ${a(3)} style="margin-top:14px"><span class="p">${fmt(S.cause.body)}</span></p>
+      <div class="grow"></div>
+      <div ${a(4)}>${S.cause.gifts.map(([h, t]) => `<div class="gain"><span>${h}</span><b>${t}</b></div>`).join("")}</div>
+      <p ${a(5)} style="margin-top:16px"><span class="small">${fmt(S.cause.honesty)}</span></p>`],
+
+    // 5 · Notre histoire
+    ["ivory", "deaf", `
+      ${I.ear ? `<div class="ear a" style="--d:1"><img src="${I.ear}" alt="Une oreille dessinée par une foule"></div>` : ""}
+      <div class="grow"></div>
+      <div class="stack">
+        <p ${a(2)}><span class="eyebrow">${fmt(S.deaf.lead)}</span></p>
+        <h2 ${a(3)}><span class="h">${fmt(S.deaf.title)}</span></h2>
+        <p ${a(5)}><span class="p">L’un des fondateurs, Yanil, a grandi avec un frère sourd. Autour d’un café, on se fait face : on lit sur les lèvres, on suit un regard, on répond avec les mains.</span></p>
       </div>`],
 
     // 6 · Le café
@@ -65,16 +62,16 @@
       <div class="stack">
         <h2 ${a(3)}><span class="h" style="font-size:32px">Deux références,<br><em>un même assemblage.</em></span></h2>
         <div ${a(4)}><div class="tags">${cf.products.map((p) => `<span>${p.format} · ${p.price}</span>`).join("")}</div></div>
-        <p ${a(5)}><span class="small">100&#8239;% Arabica d’altitude · Brésil, Colombie, Pérou, Éthiopie · torréfaction medium-dark en Europe · ${cf.profile.join(", ").toLowerCase()}</span></p>
+        <p ${a(5)}><span class="small">100&#8239;% Arabica · Brésil, Pérou, Colombie, Éthiopie · medium-dark · profil doux et chocolaté</span></p>
       </div>`],
 
     // 7 · Le stand
     ["kaki", "onsite", `
-      <p ${a(1)}><span class="eyebrow">Le samedi en rayon</span></p>
-      <h2 ${a(2)} style="margin-top:14px"><span class="h">Le produit attire.<br>La dégustation convainc.<br><em>L’histoire fait vendre.</em></span></h2>
+      <p ${a(1)}><span class="eyebrow">${S.meeting.label}</span></p>
+      <h2 ${a(2)} style="margin-top:14px"><span class="h">Le produit attire.<br>La dégustation convainc.<br><em>L’échange fait vendre.</em></span></h2>
       ${I.onsite ? `<div class="shot a" style="--d:3"><img src="${I.onsite}" alt="Le stand Maison YAKA en magasin"></div>` : '<div class="grow"></div>'}
       <p ${a(4)}><span class="p">${fmt(S.meeting.body)}</span></p>
-      <div ${a(5)} style="margin-top:12px"><div class="tags">${S.meeting.qualities.slice(0, 3).map((q) => `<span>${q}</span>`).join("")}</div></div>`],
+      <div ${a(5)} style="margin-top:12px"><div class="tags">${S.meeting.qualities.slice(1).map((q) => `<span>${q}</span>`).join("")}</div></div>`],
 
     // 8 · Le terrain
     ["dark", "proof", `
@@ -90,9 +87,9 @@
     // 9 · Proposition
     ["sand", "pilot", `
       <p ${a(1)}><span class="eyebrow">Notre proposition</span></p>
-      <h2 ${a(2)} style="margin-top:14px"><span class="h">Maison YAKA chez vous,<br><em>chaque samedi.</em></span></h2>
+      <h2 ${a(2)} style="margin-top:14px"><span class="h" style="font-size:31px">Une première date<br><em>Maison YAKA chez vous.</em></span></h2>
       <div class="grow"></div>
-      <div ${a(3)}><div class="formula"><div><b>2</b><span>étudiants</span></div><div><b>1</b><span>stand</span></div><div><b>1&#8239;€</b><span>par produit</span></div><div><b>1</b><span>bilan partagé</span></div></div></div>
+      <div ${a(3)}><div class="formula">${S.pilot.formula.map(([v, k]) => `<div><b>${v}</b><span>${k}</span></div>`).join("")}</div></div>
       <div class="grow"></div>
       <p ${a(4)}><span class="eyebrow">Ce que nous vous demandons</span></p>
       <ul class="a ask" style="--d:5;margin-top:6px">${S.pilot.asks.map((x, i) => `<li data-n="0${i + 1}">${x}</li>`).join("")}</ul>`],
@@ -100,12 +97,14 @@
     // 10 · Contact
     ["kaki", "contact", `
       <p ${a(1)}><span class="eyebrow">Contact</span></p>
-      <h2 ${a(2)} style="margin-top:14px"><span class="h" style="font-size:36px">Faisons de vos samedis<br><em>des samedis Maison YAKA.</em></span></h2>
+      <h2 ${a(2)} style="margin-top:14px"><span class="h" style="font-size:34px">Accueillez Maison YAKA<br><em>dans votre magasin.</em></span></h2>
+      <p ${a(3)} style="margin-top:12px"><span class="p">${fmt(S.cta.body)}</span></p>
       <div class="grow"></div>
       <div ${a(3)}><div class="people">${C.founders.map((p) => `<figure><img src="${p.image}" alt="${p.name}"><figcaption>${p.name}</figcaption></figure>`).join("")}</div></div>
       <div class="grow"></div>
       <div ${a(4)}><div class="btns">
-        ${C.founders[0].phone ? `<a class="btn gold" href="tel:${tel(C.founders[0].phone)}">Appeler Yanil <small>${C.founders[0].phone}</small></a>` : ""}
+        ${C.ctaEmail ? `<a class="btn gold" href="mailto:${C.ctaEmail}?subject=${encodeURIComponent("Accueillir Maison YAKA dans notre magasin")}">${S.cta.button} <small>${C.ctaEmail}</small></a>` : ""}
+        ${C.founders[0].phone ? `<a class="btn" href="tel:${tel(C.founders[0].phone)}">Appeler Yanil <small>${C.founders[0].phone}</small></a>` : ""}
         ${C.founders.map((p) => `<a class="btn" href="mailto:${p.email}">Écrire à ${p.name.split(" ")[0]} <small>${p.email}</small></a>`).join("")}
         ${C.website ? `<a class="btn" href="https://${C.website}" target="_blank" rel="noopener">Notre site <small>${C.website}</small></a>` : ""}
       </div></div>`],
@@ -118,7 +117,7 @@
     <div class="top"><span class="mark" aria-label="YAKA"></span><span class="count"></span></div>
     ${cards.map(([theme, id, html]) => `<section class="card ${theme} c-${id}" id="${id}">${html}</section>`).join("")}`;
   const els = [...deck.querySelectorAll(".card")], bars = [...deck.querySelectorAll(".bars i")], count = deck.querySelector(".count");
-  const DUR = [6, 8, 9, 9, 9, 8, 9, 9, 9, 0];
+  const DUR = [7, 11, 10, 10, 8, 8, 9, 9, 9, 0];
 
   if (/[?&]print\b/.test(location.search)) { els.forEach((e) => e.classList.add("on")); return; }
 

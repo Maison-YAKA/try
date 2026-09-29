@@ -1030,6 +1030,31 @@ body[data-slide="cover"] .brandmark { opacity: 0; pointer-events: none; }
 @media print { .s-model .head .upper.muted, .s-cause .range span { visibility: hidden; } }
 .s-product .specs dl { grid-template-columns: max-content 1fr; column-gap: calc(var(--u) * 2.4); } .s-product .specs dt { padding-right: 0; white-space: nowrap; }
 
+/* ---------- Fonctionnement : chapeau + étapes -------------------------- */
+.s-turnkey .lead { margin-top: calc(var(--u) * 1.6); max-width: 46em; font-size: var(--fs-s); line-height: 1.45; color: var(--fg-70); }
+.s-turnkey .big li b { font-family: var(--sans); font-weight: 600; font-size: .62em; letter-spacing: .14em; text-transform: uppercase; margin-right: .7em; color: var(--fg-70); }
+.s-turnkey .big li.us b { color: #9A7440; }
+
+/* ---------- Engagement : ce que devient un emplacement ----------------- */
+.s-cause .gift { align-self: center; border-left: 1px solid var(--fg-10); padding-left: calc(var(--u) * 4.4); }
+.s-cause .gift .quote { font-weight: 300; font-size: calc(var(--u) * 2.9); line-height: 1.12; color: var(--fg); }
+.s-cause .gift ul { list-style: none; margin-top: calc(var(--u) * 3); }
+.s-cause .gift li { display: grid; grid-template-columns: 1fr auto; gap: 1.2em; align-items: baseline; padding: calc(var(--u) * 1.1) 0; border-top: 1px solid var(--fg-10); }
+.s-cause .gift li:last-child { border-bottom: 1px solid var(--fg-10); }
+.s-cause .gift li b { font-weight: 300; font-size: calc(var(--u) * 2.1); color: #F5D4A5; }
+.s-cause .gift li span { font-size: var(--fs-s); color: var(--fg-70); text-align: right; }
+@media (max-width: 900px), (max-aspect-ratio: 4/5) {
+  .s-turnkey .lead { font-size: 16px; margin-top: 16px; }
+  .s-cause .gift { border-left: 0; padding-left: 0; border-top: 1px solid var(--fg-10); padding-top: 32px; }
+  .s-cause .gift .quote { font-size: 26px; }
+  .s-cause .gift li { grid-template-columns: 1fr; gap: 4px; }
+  .s-cause .gift li b { font-size: 22px; }
+  .s-cause .gift li span { text-align: left; font-size: 14px; }
+}
+.s-cause .title { font-size: calc(var(--u) * 4.3); line-height: 1.02; }
+.s-turnkey .cols { margin-top: calc(var(--u) * 3.2); }
+@media (max-width: 900px), (max-aspect-ratio: 4/5) { .s-cause .title { font-size: 38px; } .s-turnkey .cols { margin-top: 32px; } }
+
 </style>
 </head>
 <body data-theme="black">
@@ -1057,8 +1082,8 @@ window.YAKA_CONTENT = {
   /* ---------- Général ---------------------------------------------------- */
   meta: {
     brand: "Maison YAKA",
-    documentTitle: "Maison YAKA — L’animation café solidaire pour votre magasin",
-    edition: "Animation café solidaire · Présentation magasins",
+    documentTitle: "Maison YAKA — Accueillir un stand café dans votre magasin",
+    edition: "Animation café en magasin · Présentation magasins",
     audience: "Magasins partenaires",
   },
 
@@ -1094,11 +1119,11 @@ window.YAKA_CONTENT = {
 
   /* ---------- Le café ---------------------------------------------------- */
   coffee: {
-    type: "100 % Arabica d’altitude",
+    type: "100 % Arabica",
     blend: "Assemblage de quatre origines",
     origins: "Brésil · Colombie · Pérou · Éthiopie",
     originsRole: "Brésil pour la rondeur, Colombie pour l’équilibre, Pérou pour la douceur, Éthiopie pour le parfum",
-    roast: "Medium-dark, par des maîtres torréfacteurs européens",
+    roast: "Medium-dark",
     products: [
       { name: "Café en grains", format: "Sachet 250 g", price: "14,90 €", note: "Sachet à valve fraîcheur dégazante" },
       { name: "Café en capsules", format: "Boîte de 20 capsules", price: "14,90 €", note: "Capsules operculées une à une" },
@@ -1108,18 +1133,14 @@ window.YAKA_CONTENT = {
     price: "14,90 € TTC",
     priceLabel: "Prix public",
     usage: "Grains : espresso, machine automatique, italienne, filtre, piston · Capsules : espresso",
-    profile: ["Cacao", "Noisette", "Rond"],
+    profile: ["Doux", "Chocolaté", "Medium-dark"],
   },
 
   /* ---------- L'association ---------------------------------------------- */
   cause: {
-    perPack: 1,                 // € reversés par produit acheté
-    raised: "1 160 €",          // montant déjà reversé (source : maison-yaka.fr/engagement)
-    example: 1000,              // exemple mis en avant : 1 000 produits = 1 000 €
-    simulatorMax: 3000,         // borne haute du simulateur
     audience: "les personnes sourdes et malentendantes",
-    partnerStatus: "Association en cours de sélection",
-    partnerName: null,          // renseigner lorsque le partenariat sera officiel
+    status: "Engagement en construction",
+    partnerName: null,          // à renseigner uniquement lorsqu’un partenariat sera officiel
   },
 
   /* ---------- Vente terrain (autre catégorie de produit) ----------------- */
@@ -1139,15 +1160,14 @@ window.YAKA_CONTENT = {
 
     cover: {
       nav: "Maison YAKA",
-      tagline: "L’animation café solidaire,\nclé en main.",
-      promise: "1 produit acheté = 1 € reversé\naux personnes sourdes et malentendantes.",
-      eyebrow: "Maison YAKA · Animation café solidaire",
+      tagline: "L’animation café en magasin,\nsimple et solidaire.",
+      eyebrow: "Maison YAKA · Animation café en magasin",
       headline: "Un grand café.\nUn geste qui compte.",
-      lead: "Chaque samedi, nos étudiants font déguster Maison YAKA dans vos allées. Chaque produit acheté reverse 1 € pour accompagner les personnes sourdes et malentendantes.",
+      lead: "Accueillez ponctuellement un stand Maison YAKA : vos clients découvrent un café premium, un étudiant vit une expérience rémunérée et le projet soutient une démarche solidaire.",
       facts: [
-        ["1 €", "reversé sur chaque produit acheté"],
-        ["1 160 €", "déjà collectés pour la cause"],
-        ["0", "contrainte pour vos équipes"],
+        ["1", "emplacement de quelques mètres carrés"],
+        ["1", "étudiant présent sur le stand"],
+        ["100 %", "Arabica, quatre origines"],
       ],
     },
 
@@ -1157,47 +1177,50 @@ window.YAKA_CONTENT = {
       title: "Chacun y gagne,\nà commencer par vous.",
       hint: "Survolez le cercle",
       nodes: [
-        { name: "Magasin",     does: "accueille Maison YAKA le samedi",       gets: "Une animation qui fait tourner les ventes, sans effort pour vos équipes." },
-        { name: "Clients",     does: "dégustent et découvrent le café",        gets: "Un grand café, en grains ou en capsules, et un geste utile." },
-        { name: "Association", does: "reçoit 1 € par produit acheté",          gets: "Un soutien régulier pour les personnes sourdes et malentendantes." },
-        { name: "Étudiants",   does: "présentent le café et racontent la cause", gets: "Un revenu et une première vraie expérience." },
+        { name: "Magasin",     does: "accueille un stand Maison YAKA",  gets: "Une animation qualitative et simple à accueillir, qui apporte une expérience supplémentaire aux clients tout en soutenant une initiative étudiante et solidaire." },
+        { name: "Étudiant",    does: "présente et vend le café",         gets: "Une expérience commerciale concrète, rémunérée et professionnalisante, directement au contact des clients." },
+        { name: "Client",      does: "déguste et échange",               gets: "La découverte d’un café premium à travers un échange humain, directement dans son magasin habituel." },
+        { name: "Maison YAKA", does: "organise l’animation",             gets: "Une rencontre directe avec ses clients et la possibilité de développer la marque sur le terrain tout en faisant grandir ses engagements." },
       ],
-      loop: "… et le cercle recommence, chaque samedi.",
+      loop: "… et une démarche solidaire qui avance.",
     },
 
     turnkey: {
-      nav: "Clé en main",
-      label: "Clé en main",
-      title: "Nous apportons tout.\nVous ouvrez la porte.",
-      yakaTitle: "Maison YAKA apporte",
+      nav: "Fonctionnement",
+      label: "Comment ça fonctionne",
+      title: "Vous nous accueillez.\nNous nous occupons du reste.",
+      lead: "Installation, présence de l’étudiant, présentation des produits, encaissement et rangement : Maison YAKA prend en charge l’animation du stand.",
+      yakaTitle: "Une journée Maison YAKA, en cinq étapes",
       yaka: [
-        "Les deux références et tout le stock",
-        "Deux étudiants formés, rémunérés et accompagnés",
-        "Un stand épuré, monté en dix minutes",
-        "Les dégustations, toute la journée",
-        "Le bilan de la journée",
+        { who: "Votre magasin", what: "met à disposition un petit emplacement" },
+        { who: "Maison YAKA",   what: "installe et organise le stand" },
+        { who: "Un étudiant",   what: "présente et vend les produits" },
+        { who: "Maison YAKA",   what: "gère l’encaissement" },
+        { who: "Maison YAKA",   what: "range et libère l’emplacement" },
       ],
-      storeTitle: "Votre magasin fournit",
+      storeTitle: "De votre côté",
       store: [
         "Un emplacement dans une allée passante",
         "Surface : [[à préciser]]",
-        "Le samedi (et d’autres jours si vous le souhaitez)",
+        "Une ou plusieurs dates, choisies avec vous",
         "Horaires : [[à caler ensemble]]",
       ],
-      note: "Pas de stock à acheter pour l’animation. Pas de personnel détaché.",
+      note: "Un fonctionnement simple pour vos équipes. Une table peut suffire.",
     },
 
     cause: {
-      nav: "Écouter, vraiment",
+      nav: "Notre engagement",
       label: "Notre engagement",
-      title: "Chaque tasse\nfait un geste.",
-      body: "1 € est reversé sur chaque produit acheté, chaque jour, sans exception, pour accompagner et équiper les personnes sourdes et malentendantes.",
-      raisedLabel: "collectés à ce jour",
-      example: "produits achetés",
-      exampleResult: "reversés à l’association",
-      simLabel: "Faites glisser pour simuler",
-      simNote: "Simulation illustrative : 1 € par produit acheté.",
-      honesty: "Nous choisissons actuellement l’association qui recevra chaque euro reversé. Son nom et ses actions seront présentés très bientôt.",
+      title: "Votre magasin\nprend aussi part\nà notre engagement.",
+      body: "En accueillant Maison YAKA et en mettant un emplacement à disposition, vous permettez à notre projet de se développer et contribuez indirectement à une démarche qui nous tient personnellement à cœur : agir autour de la surdité.",
+      statusLabel: "Statut",
+      honesty: "Les partenaires et les modalités de soutien seront présentés lorsqu’ils seront officialisés.",
+      quote: "Un emplacement de quelques mètres carrés peut devenir bien plus qu’un simple stand.",
+      gifts: [
+        ["Une opportunité", "pour un étudiant"],
+        ["Une découverte", "pour vos clients"],
+        ["Une contribution indirecte", "à une démarche solidaire"],
+      ],
     },
 
     deaf: {
@@ -1205,15 +1228,15 @@ window.YAKA_CONTENT = {
       label: "Notre histoire",
       lead: "Un café se choisit. Une cause se vit.",
       title: "Maison YAKA commence\npar un silence.",
-      body: "L’un des fondateurs a grandi avec un frère sourd. Les conversations qui s’arrêtent net au milieu d’un repas, l’isolement discret du quotidien. Le café est l’un des rares moments où l’on se fait face : on peut lire sur les lèvres, suivre un regard, répondre avec les mains.",
-      closing: "« On n’a pas voulu créer une marque de café qui soutient une cause. On a voulu créer une cause qui se sert du café pour exister. »",
+      body: "L’un des fondateurs, Yanil, a grandi avec un frère sourd. Les conversations qui s’arrêtent au milieu d’un repas, l’isolement discret du quotidien. Autour d’un café, on se fait face : on lit sur les lèvres, on suit un regard, on répond avec les mains.",
+      closing: "Maison YAKA est d’abord une marque de café. Cette histoire donne du sens à ce que nous construisons et oriente nos engagements autour de la surdité.",
     },
 
     interlude: {
       nav: "Quatre terres",
       label: "Les origines",
       title: "Quatre terres.\nUn même équilibre.",
-      notes: "Cacao · Noisette · Rond",
+      notes: "100 % Arabica · Doux et chocolaté · Medium-dark",
       origins: [["Brésil", "la rondeur"], ["Colombie", "l’équilibre"], ["Pérou", "la douceur"], ["Éthiopie", "le parfum"]],
     },
 
@@ -1221,18 +1244,18 @@ window.YAKA_CONTENT = {
       nav: "Le café",
       label: "Le café",
       title: "Deux références,\nun même assemblage.",
-      promise: "Un café ample et chocolaté, que l’on peut servir à tout le monde.\nDeux formats nets, faciles à mettre en rayon.",
+      promise: "Un profil doux et chocolaté, accessible à tous les amateurs de café.\nDeux formats simples : grains et capsules.",
     },
 
     people: {
       nav: "Les étudiants",
       label: "Les étudiants",
-      formula: [["2", "étudiants"], ["1", "stand"], ["2", "références"], ["1", "samedi"]],
+      formula: [["1", "étudiant"], ["1", "stand"], ["2", "références"], ["1", "journée"]],
       title: "Faire grandir\nles talents.",
-      body: "En magasin, ce sont des étudiants qui présentent le café et racontent la cause. Ils apprennent le conseil, la vente et la confiance en soi, rémunérés et accompagnés à chaque étape.",
+      body: "Sur le stand, c’est un étudiant qui accueille vos clients, présente le café et le vend. Une expérience commerciale concrète, rémunérée et encadrée par Maison YAKA.",
       skills: ["Prise de parole", "Confiance", "Conseil", "Vente", "Relation client", "Responsabilité", "Expérience professionnelle"],
-      quote: "Un samedi de travail.\nUne expérience qui reste.",
-      network: "Pour beaucoup, c’est une première vraie expérience : parler à des inconnus, conseiller, convaincre.",
+      quote: "Une journée de terrain.\nUne expérience qui compte.",
+      network: "Accueillir, conseiller, vendre : des compétences utiles, acquises face à de vrais clients.",
       photoCaption: "Étudiant Maison YAKA au stand",
     },
 
@@ -1245,13 +1268,13 @@ window.YAKA_CONTENT = {
 
     meeting: {
       nav: "Le stand",
-      label: "Le samedi en rayon",
-      lines: ["Le produit attire.", "La dégustation convainc.", "L’histoire fait vendre."],
-      body: "Deux étudiants formés, un stand monté en dix minutes, des dégustations et une cause racontée en direct à vos clients.",
-      qualities: ["Stand épuré", "Monté en dix minutes", "Dégustations", "Aucune charge pour vos équipes"],
-      optionsTitle: "Et pour aller plus loin, en rayon",
+      label: "Le stand en magasin",
+      lines: ["Le produit attire.", "La dégustation convainc.", "L’échange fait vendre."],
+      body: "Un étudiant formé, un stand épuré installé rapidement, des dégustations et un vrai échange avec vos clients.",
+      qualities: ["Stand épuré", "Installation rapide", "Dégustations", "Encaissement géré par Maison YAKA"],
+      optionsTitle: "Et si vous le souhaitez, en rayon",
       options: [
-        ["Deux références", "Un sachet de grains 250 g et une boîte de 20 capsules, à 14,90 €, faciles à mettre en rayon."],
+        ["Deux références", "Un sachet de grains 250 g et une boîte de 20 capsules, à 14,90 € chacun."],
         ["Kit de merchandising", "Display de comptoir épuré, fiches origines et argumentaire de vente fournis avec la première commande."],
       ],
     },
@@ -1259,29 +1282,29 @@ window.YAKA_CONTENT = {
     pilot: {
       nav: "Notre proposition",
       label: "Notre proposition",
-      titleGeneric: "Maison YAKA chez vous,\nchaque samedi.",
-      titlePartner: "Maison YAKA à {city},\nchaque samedi.",
-      formula: [["2", "étudiants"], ["1", "stand"], ["Tous", "les samedis"], ["1 €", "par produit"]],
+      titleGeneric: "Une première date\nMaison YAKA chez vous.",
+      titlePartner: "Une première date\nMaison YAKA à {city}.",
+      formula: [["1", "emplacement"], ["1", "étudiant"], ["1", "date à convenir"], ["1", "bilan partagé"]],
       askTitle: "Ce que nous vous demandons",
-      asks: ["Un emplacement dans une allée passante", "Une présence chaque samedi, et d’autres jours si vous le souhaitez", "Cet emplacement mis à disposition gracieusement, ou à tarif solidaire"],
-      askWhy: "Un emplacement gracieux ou solidaire nous permet de consacrer nos moyens au projet et à l’association.",
+      asks: ["Un emplacement dans une allée passante", "Une première date, puis d’autres si l’expérience vous convient", "Cet emplacement mis à disposition gracieusement, ou à tarif solidaire"],
+      askWhy: "Un emplacement gracieux ou solidaire nous permet de consacrer nos moyens au projet, aux étudiants et à nos engagements.",
       measureTitle: "Ce que vous recevez après chaque journée",
-      measures: ["Ventes et transactions", "Retours clients", "Retour de vos équipes", "Montant reversé grâce à vos clients"],
-      line: "Une animation qui fait tourner les ventes,\nune cause qui avance,\net si vous le souhaitez, un référencement en rayon.",
+      measures: ["Ventes et transactions", "Retours de vos clients", "Retour de vos équipes"],
+      line: "Une animation pour vos clients,\nune expérience pour un étudiant,\net si vous le souhaitez, un référencement en rayon.",
     },
 
     founders: {
       nav: "Qui sommes-nous",
       label: "Qui sommes-nous",
-      title: "Deux entrepreneurs.\nLe goût du terrain.\nUne cause à servir.",
-      body: "Yanil et Arthur ont créé Maison YAKA. Ils recrutent, forment et accompagnent les étudiants qui présentent le café et racontent la cause dans vos allées.\n\nUn grand café, une vente humaine, et une cause qui les touche de près.",
+      title: "Deux entrepreneurs.\nLe goût du terrain.\nUn engagement sincère.",
+      body: "Yanil et Arthur ont créé Maison YAKA. Ils recrutent, forment et accompagnent les étudiants qui présentent le café dans vos allées.\n\nUn café premium, une vente humaine et un engagement qui les touche de près.",
     },
 
     cta: {
       nav: "Contact",
-      title: "Faisons de vos samedis\ndes samedis Maison YAKA.",
-      body: "Un rendez-vous fixe, chaque samedi, dans votre magasin.",
-      button: "Nous écrire",
+      title: "Accueillez Maison YAKA\ndans votre magasin.",
+      body: "Proposez-nous un emplacement et une date : nous organisons le reste avec vous.",
+      button: "Proposer une date",
     },
   },
 };
@@ -1403,9 +1426,28 @@ window.YAKA_CONTENT = {
       </div>
     </section>`);
 
-  // L'association : 1 paquet = 1 €
+  // Fonctionnement : vous nous accueillez, nous nous occupons du reste
+  const K = S.turnkey;
+  add("turnkey", "sand", K.nav, `
+    <section class="slide s-turnkey sand">
+      ${label(next(), K.label)}
+      ${lines(K.title, "title serif")}
+      <p class="lead r" style="--d:2">${fmt(K.lead)}</p>
+      <div class="cols">
+        <div class="col big r" style="--d:3">
+          <h4 class="upper muted">${K.yakaTitle}</h4>
+          <ol>${K.yaka.map((x, i) => `<li${x.who === "Maison YAKA" ? ' class="us"' : ""}><em>0${i + 1}</em><span><b>${x.who}</b> ${fmt(x.what)}</span></li>`).join("")}</ol>
+        </div>
+        <div class="col small r" style="--d:5">
+          <h4 class="upper muted">${K.storeTitle}</h4>
+          <ul>${K.store.map((x) => `<li>${fmt(x)}</li>`).join("")}</ul>
+          <p class="note serif italic">${fmt(K.note)}</p>
+        </div>
+      </div>
+    </section>`);
+
+  // Notre engagement (en construction : aucun montant ni partenaire annoncé)
   const CA = C.cause, CS = S.cause;
-  const nf = (x) => Math.round(x).toLocaleString("fr-FR").replace(/ | /g, " ");
   add("cause", "kaki", CS.nav, `
     <section class="slide s-cause kaki">
       <div class="grid">
@@ -1414,25 +1456,13 @@ window.YAKA_CONTENT = {
           ${lines(CS.title, "title serif", 1)}
           <p class="body r" style="--d:4">${fmt(CS.body)}</p>
           <div class="status r" style="--d:6">
-            ${CA.raised ? `<div class="row raised"><span class="upper muted">Déjà collectés</span><span><b>${CA.raised}</b> ${CS.raisedLabel}</span></div>` : ""}
-            <div class="row"><span class="upper muted">Association</span><span>${CA.partnerName ? CA.partnerName : todo(CA.partnerStatus)}</span></div>
+            <div class="row"><span class="upper muted">${CS.statusLabel}</span><span>${CA.partnerName || CA.status}</span></div>
           </div>
           <p class="honesty r" style="--d:7">${fmt(CS.honesty)}</p>
         </div>
-        <div class="sim r" style="--d:3">
-          <div class="eq">
-            <div class="v"><span class="sim-packs">${nf(CA.example)}</span></div>
-            <div class="k upper">${CS.example}</div>
-            <div class="op">=</div>
-            <div class="v strong"><span class="sim-euros">${nf(CA.example * CA.perPack)}</span><small>&#8239;€</small></div>
-            <div class="k upper">${CS.exampleResult}</div>
-          </div>
-          <label class="range">
-            <span class="upper muted">${CS.simLabel}</span>
-            <input type="range" min="0" max="${CA.simulatorMax}" step="10" value="${CA.example}" aria-label="Nombre de paquets vendus">
-          </label>
-          <div class="beads" aria-hidden="true">${Array.from({ length: 30 }, () => "<i></i>").join("")}</div>
-          <p class="sim-note muted">${fmt(CS.simNote)}</p>
+        <div class="gift r" style="--d:3">
+          <p class="quote serif">${fmt(CS.quote)}</p>
+          <ul>${CS.gifts.map(([h, t], i) => `<li class="r" style="--d:${4 + i}"><b class="serif">${h}</b><span>${t}</span></li>`).join("")}</ul>
         </div>
       </div>
     </section>`);
@@ -1454,30 +1484,11 @@ window.YAKA_CONTENT = {
       <svg class="wave" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M 0 60.0 L 5 72.0 L 10 82.1 L 15 86.5 L 20 82.8 L 25 71.3 L 30 55.1 L 35 39.1 L 40 28.7 L 45 27.5 L 50 36.2 L 55 52.2 L 60 70.5 L 65 85.3 L 70 92.1 L 75 89.1 L 80 77.8 L 85 62.2 L 90 47.4 L 95 37.9 L 100 35.9 L 105 41.1 L 110 50.8 L 115 61.5 L 120 69.8 L 125 73.5 L 130 72.6 L 135 68.4 L 140 62.9 L 145 58.1 L 150 55.3 L 155 54.7 L 160 55.7 L 165 57.6 L 170 59.5 L 175 61.1 L 180 62.1 L 185 62.6 L 190 62.5 L 195 61.6 L 200 60.0 L 205 57.7 L 210 55.3 L 215 53.9 L 220 54.3 L 225 56.9 L 230 61.6 L 235 66.9 L 240 71.1 L 245 72.3 L 250 69.6 L 255 63.3 L 260 55.0 L 265 47.4 L 270 43.1 L 275 43.8 L 280 49.6 L 285 58.8 L 290 68.6 L 295 75.9 L 300 78.3 L 305 75.2 L 310 67.8 L 315 58.4 L 320 50.2 L 325 45.5 L 330 45.4 L 335 49.6 L 340 56.2 L 345 62.9 L 350 67.8 L 355 69.5 L 360 68.3 L 365 64.9 L 370 60.9 L 375 57.7 L 380 56.0 L 385 55.9 L 390 57.0 L 395 58.6 L 400 60.0 L 405 61.0 L 410 61.4 L 415 61.3 L 420 61.0 L 425 60.4 L 430 59.8 L 435 59.1 L 440 58.5 L 445 58.2 L 450 58.5 L 455 59.4 L 460 61.0 L 465 62.6 L 470 63.8 L 475 63.9 L 480 62.7 L 485 60.3 L 490 57.4 L 495 54.9 L 500 53.8 L 505 54.5 L 510 57.1 L 515 60.7 L 520 64.2 L 525 66.5 L 530 66.9 L 535 65.2 L 540 61.9 L 545 58.3 L 550 55.4 L 555 54.0 L 560 54.5 L 565 56.6 L 570 59.3 L 575 61.9 L 580 63.6 L 585 63.9 L 590 63.1 L 595 61.6 L 600 59.9 L 605 58.7 L 610 58.1 L 615 58.3 L 620 58.8 L 625 59.6 L 630 60.2 L 635 60.5 L 640 60.6 L 645 60.5 L 650 60.3 L 655 60.1 L 660 59.9 L 665 59.8 L 670 59.7 L 675 59.7 L 680 59.8 L 685 60.0 L 690 60.2 L 695 60.4 L 700 60.5 L 705 60.4 L 710 60.2 L 715 59.9 L 720 59.6 L 725 59.4 L 730 59.3 L 735 59.5 L 740 59.8 L 745 60.2 L 750 60.4 L 755 60.6 L 760 60.5 L 765 60.3 L 770 60.1 L 775 59.9 L 780 59.8 L 785 59.8 L 790 59.8 L 795 59.9 L 800 60.0 L 805 60.0 L 810 60.0 L 815 60.0 L 820 60.0 L 825 60.0 L 830 60.0 L 835 60.0 L 840 60.0 L 845 60.0 L 850 60.0 L 855 60.0 L 860 60.0 L 865 60.0 L 870 60.0 L 875 60.0 L 880 60.0 L 885 60.0 L 890 60.0 L 895 60.0 L 900 60.0 L 905 60.0 L 910 60.0 L 915 60.0 L 920 60.0 L 925 60.0 L 930 60.0 L 935 60.0 L 940 60.0 L 945 60.0 L 950 60.0 L 955 60.0 L 960 60.0 L 965 60.0 L 970 60.0 L 975 60.0 L 980 60.0 L 985 60.0 L 990 60.0 L 995 60.0 L 1000 60.0 L 1005 60.0 L 1010 60.0 L 1015 60.0 L 1020 60.0 L 1025 60.0 L 1030 60.0 L 1035 60.0 L 1040 60.0 L 1045 60.0 L 1050 60.0 L 1055 60.0 L 1060 60.0 L 1065 60.0 L 1070 60.0 L 1075 60.0 L 1080 60.0 L 1085 60.0 L 1090 60.0 L 1095 60.0 L 1100 60.0 L 1105 60.0 L 1110 60.0 L 1115 60.0 L 1120 60.0 L 1125 60.0 L 1130 60.0 L 1135 60.0 L 1140 60.0 L 1145 60.0 L 1150 60.0 L 1155 60.0 L 1160 60.0 L 1165 60.0 L 1170 60.0 L 1175 60.0 L 1180 60.0 L 1185 60.0 L 1190 60.0 L 1195 60.0 L 1200 60.0"/></svg>
     </section>`);
 
-  // Clé en main
-  const K = S.turnkey;
-  add("turnkey", "sand", K.nav, `
-    <section class="slide s-turnkey sand">
-      ${label(next(), K.label)}
-      ${lines(K.title, "title serif")}
-      <div class="cols">
-        <div class="col big r" style="--d:2">
-          <h4 class="upper muted">${K.yakaTitle}</h4>
-          <ol>${K.yaka.map((x, i) => `<li><em>0${i + 1}</em><span>${fmt(x)}</span></li>`).join("")}</ol>
-        </div>
-        <div class="col small r" style="--d:4">
-          <h4 class="upper muted">${K.storeTitle}</h4>
-          <ul>${K.store.map((x) => `<li>${fmt(x)}</li>`).join("")}</ul>
-          <p class="note serif italic">${fmt(K.note)}</p>
-        </div>
-      </div>
-    </section>`);
-
   // Quatre terres (respiration photo, comme le site)
   const IT = S.interlude;
   add("interlude", "black", IT.nav, `
     <section class="slide s-terroir">
-      <div class="bg r-fade"><img src="${C.images.terroir}" alt="Paysage de caféiers en altitude"></div>
+      <div class="bg r-fade"><img src="${C.images.terroir}" alt="Paysage de caféiers"></div>
       ${label(next(), IT.label)}
       ${lines(IT.title, "title serif", 1)}
       <p class="notes upper r" style="--d:3">${IT.notes}</p>
@@ -1608,7 +1619,7 @@ window.YAKA_CONTENT = {
     </section>`);
 
   // Call to action
-  const mail = C.ctaEmail ? `mailto:${C.ctaEmail}?subject=${encodeURIComponent("Un samedi Maison YAKA" + (PT ? " — " + partnerLabel : ""))}` : "#contacts";
+  const mail = C.ctaEmail ? `mailto:${C.ctaEmail}?subject=${encodeURIComponent("Accueillir Maison YAKA dans notre magasin" + (PT ? " — " + partnerLabel : ""))}` : "#contacts";
   add("cta", "kaki", S.cta.nav, `
     <section class="slide s-cta kaki">
       <div class="bg">${C.images.hero ? `<img src="${C.images.hero}" alt="">` : ""}</div>
@@ -1763,23 +1774,6 @@ window.YAKA_CONTENT = {
     };
     requestAnimationFrame(tick);
   }
-
-  /* ---------- Simulateur : paquets vendus → € reversés ------------------ */
-  const sim = document.querySelector(".s-cause .sim");
-  const range = sim.querySelector("input[type=range]");
-  const simPacks = sim.querySelector(".sim-packs");
-  const simEuros = sim.querySelector(".sim-euros");
-  const beads = [...sim.querySelectorAll(".beads i")];
-  function renderSim() {
-    const v = +range.value;
-    simPacks.textContent = nf(v);
-    simEuros.textContent = nf(v * CA.perPack);
-    range.style.setProperty("--p", (v / +range.max * 100).toFixed(2) + "%");
-    const on = Math.round(v / +range.max * beads.length);
-    beads.forEach((b, i) => b.classList.toggle("on", i < on));
-  }
-  range.addEventListener("input", renderSim);
-  renderSim();
 
   /* ---------- Cercle interactif ------------------------------------------ */
   const model = document.getElementById("model");

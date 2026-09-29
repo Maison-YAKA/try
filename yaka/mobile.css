@@ -168,3 +168,8 @@ a { color: inherit; }
   .card .a { opacity: 1 !important; transform: none !important; transition: none !important; }
   .c-cover .bg img { transform: none !important; filter: none !important; transition: none !important; }
 }
+
+.c-coffee .pack.duo { gap: 8px; }
+.c-coffee .pack.duo img { max-width: 48%; }
+.c-onsite .shot { flex: 1; min-height: 0; margin: 14px 0; border-radius: 4px; overflow: hidden; }
+.c-onsite .shot img { width: 100%; height: 100%; object-fit: cover; }

@@ -17,7 +17,7 @@ window.YAKA_CONTENT = {
 
   /* ---------- Général ---------------------------------------------------- */
   meta: {
-    brand: "YAKA",
+    brand: "Maison YAKA",
     documentTitle: "Maison YAKA — L’animation café solidaire pour votre magasin",
     edition: "Animation café solidaire · Présentation magasins",
     audience: "Magasins partenaires",
@@ -33,43 +33,50 @@ window.YAKA_CONTENT = {
   ],
 
   /* Adresse utilisée par le bouton final. null → le bouton renvoie aux contacts. */
-  ctaEmail: "yanil@webonestudio.fr",
+  ctaEmail: "contact@webonestudio.fr",
+  contactEmail: "contact@webonestudio.fr",
 
   /* Site de la marque (affiché sur l’écran contact) */
   website: "maison-yaka.fr",
 
   images: {
-    packaging: "assets/paquet.webp",       // paquet seul (fond de l’écran contact)
-    hero: "assets/hero.webp",            // visuel de couverture (paquet, montagnes au coucher du soleil)
-    logoGold: "assets/logo-or.webp",      // logo YAKA doré (couverture)
-    packFront: "assets/hero-mobile.webp", // couverture sur téléphone
-    packBack: "assets/paquet.webp",       // paquet détouré (écran café)
-    beans: "assets/grains-macro.jpg",    // macro grains torréfiés
-    student: null,                       // étudiant YAKA en magasin
-    ear: "assets/oreille.jpg",           // oreille formée par une foule (écran « Pourquoi cette cause »)
-    onsite: null,                        // étudiant YAKA en magasin, avec ou sans table
+    packaging: "assets/paquet.webp",        // paquet seul (fond de l’écran contact)
+    hero: "assets/hero.webp",               // visuel de couverture (paquet, montagnes au coucher du soleil)
+    logoGold: "assets/logo-or.webp",        // logo Maison YAKA doré
+    packFront: "assets/hero-mobile.webp",   // couverture sur téléphone
+    packBack: "assets/pack-grains.webp",    // sachet de grains 250 g (détouré)
+    packCaps: "assets/pack-capsules.webp",  // boîte de 20 capsules (détourée)
+    beans: "assets/recolte.webp",           // récolte des cerises de café, vue aérienne
+    student: "assets/etudiant.webp",        // étudiant Maison YAKA au stand
+    ear: "assets/oreille.jpg",              // oreille formée par une foule
+    onsite: "assets/stand.webp",            // le stand Maison YAKA en magasin
   },
 
   /* ---------- Le café ---------------------------------------------------- */
   coffee: {
-    type: "100 % Arabica",
-    blend: "Assemblage de plusieurs origines",
-    origins: "Brésil · Pérou · Colombie · Éthiopie",
-    roast: "Medium-dark",
-    form: "En grains",
+    type: "100 % Arabica d’altitude",
+    blend: "Assemblage de quatre origines",
+    origins: "Brésil · Colombie · Pérou · Éthiopie",
+    originsRole: "Brésil pour la rondeur, Colombie pour l’équilibre, Pérou pour la douceur, Éthiopie pour le parfum",
+    roast: "Medium-dark, par des maîtres torréfacteurs européens",
+    products: [
+      { name: "Café en grains", format: "Sachet 250 g", price: "14,90 €", note: "Sachet à valve fraîcheur dégazante" },
+      { name: "Café en capsules", format: "Boîte de 20 capsules", price: "14,90 €", note: "Capsules operculées une à une" },
+    ],
+    form: "Grains 250 g · 20 capsules",
     weight: "250 g",
-    price: "≈ 15 € TTC",
-    priceLabel: "Prix public cible",
-    usage: "Espresso, machine automatique, italienne, filtre, piston",
-    profile: ["Doux", "Chocolaté", "Gourmand"],
-    // Fournisseur (non affiché) : Premium Dolce
+    price: "14,90 € TTC",
+    priceLabel: "Prix public",
+    usage: "Grains : espresso, machine automatique, italienne, filtre, piston · Capsules : espresso",
+    profile: ["Cacao", "Noisette", "Rond"],
   },
 
   /* ---------- L'association ---------------------------------------------- */
   cause: {
-    perPack: 1,                 // € reversés par paquet vendu
-    example: 1000,              // exemple mis en avant : 1 000 paquets = 1 000 €
-    simulatorMax: 3000,         // borne haute du simulateur (paquets)
+    perPack: 1,                 // € reversés par produit acheté
+    raised: "1 160 €",          // montant déjà reversé (source : maison-yaka.fr/engagement)
+    example: 1000,              // exemple mis en avant : 1 000 produits = 1 000 €
+    simulatorMax: 3000,         // borne haute du simulateur
     audience: "les personnes sourdes et malentendantes",
     partnerStatus: "Association en cours de sélection",
     partnerName: null,          // renseigner lorsque le partenariat sera officiel
@@ -84,36 +91,36 @@ window.YAKA_CONTENT = {
     lowest: 180,
     founderSales: 34,
     salesHypothesis: 24,
-    disclaimer: "Résultats observés lors d’une journée de vente sur stand, avec une autre catégorie de produit. Ce sont des observations, pas une prévision ni une garantie de performance pour YAKA.",
+    disclaimer: "Résultats observés lors d’une journée de vente sur stand, avec une autre catégorie de produit. Ce sont des observations, pas une prévision ni une garantie de performance pour Maison YAKA.",
   },
 
   /* ---------- Écrans ----------------------------------------------------- */
   slides: {
 
     cover: {
-      nav: "YAKA",
+      nav: "Maison YAKA",
       tagline: "L’animation café solidaire,\nclé en main.",
-      promise: "1 paquet vendu = 1 € reversé\naux personnes sourdes et malentendantes.",
+      promise: "1 produit acheté = 1 € reversé\naux personnes sourdes et malentendantes.",
       eyebrow: "Maison YAKA · Animation café solidaire",
       headline: "Un grand café.\nUn geste qui compte.",
-      lead: "Chaque samedi, un étudiant fait découvrir YAKA dans vos allées. Chaque paquet vendu soutient les personnes sourdes et malentendantes.",
+      lead: "Chaque samedi, nos étudiants font déguster Maison YAKA dans vos allées. Chaque produit acheté reverse 1 € pour accompagner les personnes sourdes et malentendantes.",
       facts: [
-        ["1 €", "reversé par paquet vendu"],
-        ["100 %", "Arabica, torréfaction medium-dark"],
+        ["1 €", "reversé sur chaque produit acheté"],
+        ["1 160 €", "déjà reversés à ce jour"],
         ["0", "contrainte pour vos équipes"],
       ],
     },
 
     model: {
       nav: "Chacun y gagne",
-      label: "Ce que YAKA apporte",
+      label: "Ce que Maison YAKA apporte",
       title: "Chacun y gagne,\nà commencer par vous.",
       hint: "Survolez le cercle",
       nodes: [
-        { name: "Magasin",     does: "accueille YAKA chaque samedi",        gets: "Une animation humaine, sans effort pour vos équipes, et un engagement à mettre en avant." },
-        { name: "Clients",     does: "découvrent un café premium",           gets: "Un bon café, et un geste utile à chaque paquet." },
-        { name: "Association", does: "reçoit 1 € par paquet vendu",          gets: "Un soutien financier régulier." },
-        { name: "Étudiant",    does: "présente le café et raconte la cause", gets: "Un revenu et une vraie expérience." },
+        { name: "Magasin",     does: "accueille Maison YAKA le samedi",       gets: "Une animation qui fait tourner les ventes, sans effort pour vos équipes." },
+        { name: "Clients",     does: "dégustent et découvrent le café",        gets: "Un grand café, en grains ou en capsules, et un geste utile." },
+        { name: "Association", does: "reçoit 1 € par produit acheté",          gets: "Un soutien régulier pour les personnes sourdes et malentendantes." },
+        { name: "Étudiants",   does: "présentent le café et racontent la cause", gets: "Un revenu et une première vraie expérience." },
       ],
       loop: "… et le cercle recommence, chaque samedi.",
     },
@@ -122,44 +129,45 @@ window.YAKA_CONTENT = {
       nav: "Clé en main",
       label: "Clé en main",
       title: "Nous apportons tout.\nVous ouvrez la porte.",
-      yakaTitle: "YAKA apporte",
+      yakaTitle: "Maison YAKA apporte",
       yaka: [
-        "Le café et tout le stock",
-        "Un étudiant formé au produit et à la cause",
-        "L’installation et le rangement",
-        "L’encaissement, sur notre propre terminal",
+        "Les deux références et tout le stock",
+        "Deux étudiants formés, rémunérés et accompagnés",
+        "Un stand épuré, monté en dix minutes",
+        "Les dégustations, toute la journée",
+        "Le kit de merchandising : display de comptoir, fiches origines, argumentaire",
         "Le bilan de la journée",
       ],
       storeTitle: "Votre magasin fournit",
       store: [
         "Un emplacement dans une allée passante",
         "Surface : [[à préciser]]",
-        "Chaque samedi (et le mercredi, si vous le souhaitez)",
+        "Le samedi (et d’autres jours si vous le souhaitez)",
         "Horaires : [[à caler ensemble]]",
-        "Une table si possible (sinon, l’étudiant va vers les clients)",
       ],
-      note: "Pas de stock à acheter. Pas de caisse mobilisée. Pas de personnel détaché.",
+      note: "Pas de stock à acheter pour l’animation. Pas de personnel détaché.",
     },
 
     cause: {
-      nav: "L’association",
-      label: "L’association",
-      title: "1 paquet vendu,\n1 € reversé.",
-      body: "À chaque paquet de café Maison YAKA vendu, 1 € est reversé à une association qui accompagne les personnes sourdes et malentendantes.",
-      example: "paquets vendus",
+      nav: "L’engagement",
+      label: "Notre engagement",
+      title: "Chaque tasse\nfait un geste.",
+      body: "1 € est reversé sur chaque produit acheté, chaque jour, sans exception, pour accompagner et équiper les personnes sourdes et malentendantes.",
+      raisedLabel: "reversés à ce jour",
+      example: "produits achetés",
       exampleResult: "reversés à l’association",
       simLabel: "Faites glisser pour simuler",
-      simNote: "Simulation illustrative : 1 € par paquet vendu.",
-      honesty: "Le choix de l’association est en cours. Aucun partenariat n’est encore signé : il sera annoncé publiquement.",
+      simNote: "Simulation illustrative : 1 € par produit acheté.",
+      honesty: "Nous choisissons actuellement l’association qui recevra chaque euro reversé. Son nom et ses actions seront présentés très bientôt.",
     },
 
     deaf: {
-      nav: "Pourquoi cette cause",
-      label: "Pourquoi cette cause",
-      lead: "Ce n’est pas une cause choisie au hasard.",
-      title: "L’un des fondateurs\nde YAKA a un frère sourd.",
-      body: "Les barrières du quotidien, les portes qui s’ouvrent moins facilement : ils les connaissent de près. C’est pour cela que YAKA soutient une association dédiée aux personnes sourdes et malentendantes.",
-      closing: "Dans votre magasin, vos clients n’achètent pas seulement un café. Ils soutiennent une cause réelle, portée par une histoire vraie.",
+      nav: "Notre histoire",
+      label: "Notre histoire",
+      lead: "Maison YAKA ne commence pas par un café.",
+      title: "Elle commence\npar un silence.",
+      body: "L’un des fondateurs a grandi avec un frère sourd. Les conversations qui s’arrêtent net au milieu d’un repas, l’isolement discret du quotidien. Le café est l’un des rares moments où l’on se fait face : on peut lire sur les lèvres, suivre un regard, répondre avec les mains.",
+      closing: "« On n’a pas voulu créer une marque de café qui soutient une cause. On a voulu créer une cause qui se sert du café pour exister. »",
     },
 
     interlude: {
@@ -171,20 +179,20 @@ window.YAKA_CONTENT = {
     product: {
       nav: "Le café",
       label: "Le café",
-      title: "Un café premium,\nsimple à choisir.",
-      promise: "Un assemblage 100 % Arabica, doux et facile à boire.\nAcheté d’abord parce qu’il est bon.",
+      title: "Deux références,\nun même assemblage.",
+      promise: "Un café ample et chocolaté, que l’on peut servir à tout le monde.\nDeux formats nets, faciles à mettre en rayon.",
     },
 
     people: {
       nav: "Les étudiants",
       label: "Les étudiants",
-      formula: [["1", "étudiant"], ["1", "magasin"], ["1", "café"], ["1", "journée"]],
-      title: "Dans chaque magasin,\nun étudiant.",
-      body: "Un étudiant rémunéré, briefé sur le produit et sur la cause. Il présente, il conseille, il n’interpelle pas.",
-      skills: ["Prise de parole", "Confiance", "Vente", "Autonomie", "Relation client", "Responsabilité", "Expérience professionnelle"],
+      formula: [["2", "étudiants"], ["1", "stand"], ["1", "café"], ["1", "samedi"]],
+      title: "Faire grandir\nles talents.",
+      body: "En magasin, ce sont des étudiants qui présentent le café et racontent la cause. Ils apprennent le conseil, la vente et la confiance en soi, rémunérés et accompagnés à chaque étape.",
+      skills: ["Prise de parole", "Confiance", "Conseil", "Vente", "Relation client", "Responsabilité", "Expérience professionnelle"],
       quote: "Un samedi de travail.\nUne expérience qui reste.",
-      network: "À terme : un réseau d’étudiants capables de représenter YAKA dans différents points de vente.",
-      photoCaption: "Étudiant YAKA en magasin — échange, produit en main",
+      network: "Faire grandir des talents fait partie du projet, au même titre que l’euro reversé.",
+      photoCaption: "Étudiant Maison YAKA au stand",
     },
 
     proof: {
@@ -195,42 +203,42 @@ window.YAKA_CONTENT = {
     },
 
     meeting: {
-      nav: "Sur place",
-      label: "Sur place",
-      lines: ["Le produit attire.", "L’histoire touche.", "Le client décide."],
-      body: "Pas de vendeur qui interpelle. Un étudiant qui présente le café et explique où va l’euro reversé.",
-      qualities: ["Léger", "Mobile", "Rien à installer", "Aucune charge pour vos équipes"],
-      optionsTitle: "Deux façons de faire",
+      nav: "Le stand",
+      label: "Le samedi en rayon",
+      lines: ["Le produit attire.", "La dégustation convainc.", "L’histoire fait vendre."],
+      body: "Deux étudiants formés, un stand monté en dix minutes, des dégustations et une cause racontée en direct à vos clients.",
+      qualities: ["Stand épuré", "Dégustations", "Kit de merchandising", "Aucune charge pour vos équipes"],
+      optionsTitle: "Et ensuite, en rayon",
       options: [
-        ["Avec une table", "Si le magasin peut nous en prêter une, le café y est présenté et les clients viennent à l’étudiant."],
-        ["Sans table", "Aucun souci : l’étudiant va directement à la rencontre des clients dans l’allée, paquet en main."],
+        ["Deux références", "Un sachet de grains 250 g et une boîte de 20 capsules, à 14,90 €, faciles à mettre en rayon."],
+        ["Kit de merchandising", "Display de comptoir épuré, fiches origines et argumentaire de vente fournis avec la première commande."],
       ],
     },
 
     pilot: {
       nav: "Notre proposition",
       label: "Notre proposition",
-      titleGeneric: "YAKA chez vous,\nchaque samedi.",
-      titlePartner: "YAKA à {city},\nchaque samedi.",
-      formula: [["1", "magasin"], ["1", "étudiant"], ["Tous", "les samedis"], ["1 €", "par paquet"]],
+      titleGeneric: "Maison YAKA chez vous,\nchaque samedi.",
+      titlePartner: "Maison YAKA à {city},\nchaque samedi.",
+      formula: [["2", "étudiants"], ["1", "stand"], ["Tous", "les samedis"], ["1 €", "par produit"]],
       askTitle: "Ce que nous vous demandons",
-      asks: ["Un emplacement dans une allée passante", "Une présence chaque samedi, et d’autres jours si vous le souhaitez (le mercredi par exemple)", "Une mise à disposition gracieuse ou à tarif solidaire"],
+      asks: ["Un emplacement dans une allée passante", "Une présence chaque samedi, et d’autres jours si vous le souhaitez", "Une mise à disposition gracieuse ou à tarif solidaire"],
       askWhy: "Un emplacement gracieux ou solidaire nous permet de consacrer nos moyens au projet et à l’association.",
       measureTitle: "Ce que vous recevez après chaque journée",
       measures: ["Ventes et transactions", "Retours clients", "Retour de vos équipes", "Montant reversé grâce à vos clients"],
-      line: "Un rendez-vous régulier,\nun bilan partagé,\nune cause qui avance.",
+      line: "Une animation qui fait tourner les ventes,\nune cause qui avance,\net si vous le souhaitez, un référencement en rayon.",
     },
 
     founders: {
       nav: "Qui sommes-nous",
       label: "Qui sommes-nous",
       title: "Deux entrepreneurs.\nLe goût du terrain.\nUne cause à servir.",
-      body: "Yanil et Arthur ont créé Maison YAKA. En magasin, ce sont des étudiants qui présentent le café et racontent la cause à vos clients : Yanil et Arthur les recrutent, les forment et les accompagnent.\n\nMaison YAKA réunit un bon produit, une vente humaine et une cause qui touche les fondateurs de près.",
+      body: "Yanil et Arthur ont créé Maison YAKA. En magasin, ce sont des étudiants qui présentent le café et racontent la cause à vos clients : Yanil et Arthur les recrutent, les forment et les accompagnent.\n\nMaison YAKA réunit un grand café, une vente humaine et une cause qui touche les fondateurs de près.",
     },
 
     cta: {
       nav: "Contact",
-      title: "Faisons de vos samedis\ndes samedis YAKA.",
+      title: "Faisons de vos samedis\ndes samedis Maison YAKA.",
       body: "Un rendez-vous fixe, chaque samedi, dans votre magasin.",
       button: "Nous écrire",
     },

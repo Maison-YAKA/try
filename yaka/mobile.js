@@ -20,30 +20,30 @@
         <p ${a(8)}><span class="hint">Touchez pour découvrir <i></i></span></p>
       </div>`],
 
-    // 2 · 1 paquet = 1 €
+    // 2 · 1 produit = 1 €
     ["kaki", "euro", `
-      <p ${a(1)}><span class="eyebrow">L’engagement</span></p>
+      <p ${a(1)}><span class="eyebrow">Notre engagement</span></p>
       <div class="grow"></div>
       <div ${a(2)}><div class="big">${C.cause.perPack}<small>&#8239;€</small></div></div>
-      <h2 ${a(3)} style="margin-top:18px"><span class="h" style="font-size:34px">reversé à chaque paquet vendu.</span></h2>
-      <p ${a(4)} style="margin-top:14px"><span class="p">Pour une association qui accompagne les personnes sourdes et malentendantes.</span></p>
+      <h2 ${a(3)} style="margin-top:18px"><span class="h" style="font-size:34px">reversé sur chaque produit acheté.</span></h2>
+      <p ${a(4)} style="margin-top:14px"><span class="p">Chaque jour, sans exception, pour accompagner et équiper les personnes sourdes et malentendantes.</span></p>
       <div class="grow"></div>
-      <div ${a(6)}><div class="eq"><div><b>1&#8239;000</b><span>paquets vendus</span></div><div class="op">=</div><div><b style="color:var(--gold)">1&#8239;000&#8239;€</b><span>reversés</span></div></div></div>
-      <p ${a(7)} style="margin-top:18px"><span class="small">Association en cours de sélection.</span></p>`],
+      <div ${a(6)}><div class="eq"><div><b style="color:var(--gold)">${C.cause.raised}</b><span>déjà reversés</span></div><div class="op"></div><div><b>2</b><span>références : grains et capsules</span></div></div></div>
+      <p ${a(7)} style="margin-top:18px"><span class="small">L’association bénéficiaire est en cours de sélection et sera présentée très bientôt.</span></p>`],
 
-    // 3 · Pourquoi cette cause
+    // 3 · Notre histoire
     ["ivory", "deaf", `
       ${I.ear ? `<div class="ear a" style="--d:1"><img src="${I.ear}" alt="Une oreille dessinée par une foule"></div>` : ""}
       <div class="grow"></div>
       <div class="stack">
-        <p ${a(2)}><span class="eyebrow">Pourquoi cette cause</span></p>
+        <p ${a(2)}><span class="eyebrow">${fmt(S.deaf.lead)}</span></p>
         <h2 ${a(3)}><span class="h">${fmt(S.deaf.title)}</span></h2>
-        <p ${a(5)}><span class="p">${fmt(S.deaf.body)}</span></p>
+        <p ${a(5)}><span class="p">L’un des fondateurs a grandi avec un frère sourd. Le café est l’un des rares moments où l’on se fait face : on peut lire sur les lèvres, suivre un regard, répondre avec les mains.</span></p>
       </div>`],
 
     // 4 · Chacun y gagne
     ["sand", "gains", `
-      <p ${a(1)}><span class="eyebrow">Ce que YAKA apporte</span></p>
+      <p ${a(1)}><span class="eyebrow">${S.model.label}</span></p>
       <h2 ${a(2)} style="margin-top:14px"><span class="h">Chacun y gagne,<br><em>à commencer par vous.</em></span></h2>
       <div class="grow"></div>
       <div ${a(4)}>${S.model.nodes.map((n) => `<div class="gain"><b>${n.name}</b><span>${n.gets}</span></div>`).join("")}</div>`],
@@ -54,27 +54,27 @@
       <h2 ${a(2)} style="margin-top:14px"><span class="h">Nous apportons tout.<br><em>Vous ouvrez la porte.</em></span></h2>
       <div class="grow"></div>
       <div class="two">
-        <div ${a(4)}><div class="box us"><h4>YAKA apporte</h4><ul>${S.turnkey.yaka.map((x) => `<li>${fmt(x)}</li>`).join("")}</ul></div></div>
-        <div ${a(5)}><div class="box you"><h4>Vous</h4><ul><li>Un emplacement dans une allée passante</li><li>Vos samedis (et le mercredi si vous voulez)</li><li>Une table si possible</li></ul></div></div>
+        <div ${a(4)}><div class="box us"><h4>Maison YAKA apporte</h4><ul>${S.turnkey.yaka.map((x) => `<li>${fmt(x.replace(" : display de comptoir, fiches origines, argumentaire", ""))}</li>`).join("")}</ul></div></div>
+        <div ${a(5)}><div class="box you"><h4>Vous</h4><ul><li>Un emplacement dans une allée passante</li><li>Le samedi (et d’autres jours si vous voulez)</li></ul></div></div>
       </div>`],
 
     // 6 · Le café
     ["dark", "coffee", `
       <p ${a(1)}><span class="eyebrow">Le café</span></p>
-      <div class="pack a" style="--d:2"><img src="${I.packBack}" alt="Paquet Maison YAKA 250 g"></div>
+      <div class="pack duo a" style="--d:2"><img src="${I.packBack}" alt="Sachet de grains Maison YAKA 250 g"><img src="${I.packCaps}" alt="Boîte de 20 capsules Maison YAKA"></div>
       <div class="stack">
-        <h2 ${a(3)}><span class="h" style="font-size:34px">100&#8239;% Arabica,<br><em>doux et chocolaté.</em></span></h2>
-        <div ${a(4)}><div class="tags"><span>Brésil</span><span>Pérou</span><span>Colombie</span><span>Éthiopie</span></div></div>
-        <p ${a(5)}><span class="small">Torréfaction ${cf.roast} · ${cf.weight} en grains · ${cf.price}</span></p>
+        <h2 ${a(3)}><span class="h" style="font-size:32px">Deux références,<br><em>un même assemblage.</em></span></h2>
+        <div ${a(4)}><div class="tags">${cf.products.map((p) => `<span>${p.format} · ${p.price}</span>`).join("")}</div></div>
+        <p ${a(5)}><span class="small">100&#8239;% Arabica d’altitude · Brésil, Colombie, Pérou, Éthiopie · torréfaction medium-dark en Europe · ${cf.profile.join(", ").toLowerCase()}</span></p>
       </div>`],
 
-    // 7 · Sur place
+    // 7 · Le stand
     ["kaki", "onsite", `
-      <p ${a(1)}><span class="eyebrow">Sur place</span></p>
-      <h2 ${a(2)} style="margin-top:14px"><span class="h">Le produit attire.<br>L’histoire touche.<br><em>Le client décide.</em></span></h2>
-      <div class="grow"></div>
-      <p ${a(3)} style="margin-bottom:16px"><span class="p">Un étudiant rémunéré, formé au produit et à la cause. Il présente, il n’interpelle pas.</span></p>
-      ${S.meeting.options.map(([h, t], i) => `<div class="opt a" style="--d:${4 + i}"><b>${h}</b><p>${t}</p></div>`).join("")}`],
+      <p ${a(1)}><span class="eyebrow">Le samedi en rayon</span></p>
+      <h2 ${a(2)} style="margin-top:14px"><span class="h">Le produit attire.<br>La dégustation convainc.<br><em>L’histoire fait vendre.</em></span></h2>
+      ${I.onsite ? `<div class="shot a" style="--d:3"><img src="${I.onsite}" alt="Le stand Maison YAKA en magasin"></div>` : '<div class="grow"></div>'}
+      <p ${a(4)}><span class="p">${fmt(S.meeting.body)}</span></p>
+      <div ${a(5)} style="margin-top:12px"><div class="tags">${S.meeting.qualities.slice(0, 3).map((q) => `<span>${q}</span>`).join("")}</div></div>`],
 
     // 8 · Le terrain
     ["dark", "proof", `
@@ -90,9 +90,9 @@
     // 9 · Proposition
     ["sand", "pilot", `
       <p ${a(1)}><span class="eyebrow">Notre proposition</span></p>
-      <h2 ${a(2)} style="margin-top:14px"><span class="h">YAKA chez vous,<br><em>chaque samedi.</em></span></h2>
+      <h2 ${a(2)} style="margin-top:14px"><span class="h">Maison YAKA chez vous,<br><em>chaque samedi.</em></span></h2>
       <div class="grow"></div>
-      <div ${a(3)}><div class="formula"><div><b>1</b><span>étudiant</span></div><div><b>0</b><span>contrainte</span></div><div><b>1&#8239;€</b><span>par paquet</span></div><div><b>1</b><span>bilan partagé</span></div></div></div>
+      <div ${a(3)}><div class="formula"><div><b>2</b><span>étudiants</span></div><div><b>1</b><span>stand</span></div><div><b>1&#8239;€</b><span>par produit</span></div><div><b>1</b><span>bilan partagé</span></div></div></div>
       <div class="grow"></div>
       <p ${a(4)}><span class="eyebrow">Ce que nous vous demandons</span></p>
       <ul class="a ask" style="--d:5;margin-top:6px">${S.pilot.asks.map((x, i) => `<li data-n="0${i + 1}">${x}</li>`).join("")}</ul>`],

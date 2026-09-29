@@ -1017,3 +1017,6 @@ body[data-slide="cover"] .brandmark { opacity: 0; pointer-events: none; }
   linear-gradient(90deg, rgba(10,9,7,.92) 0%, rgba(10,9,7,.78) 34%, rgba(10,9,7,.25) 62%, rgba(10,9,7,0) 80%),
   linear-gradient(0deg, rgba(10,9,7,.95) 0%, rgba(10,9,7,.5) 20%, rgba(10,9,7,0) 42%) !important; }
 .s-cover .photo.hero img { object-position: 70% 50% !important; }
+
+@media print { .s-model .head .upper.muted, .s-cause .range span { visibility: hidden; } }
+.s-product .specs dl { grid-template-columns: max-content 1fr; column-gap: calc(var(--u) * 2.4); } .s-product .specs dt { padding-right: 0; white-space: nowrap; }

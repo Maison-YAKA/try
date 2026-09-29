@@ -28,7 +28,7 @@
       <h2 ${a(3)} style="margin-top:18px"><span class="h" style="font-size:34px">reversé sur chaque produit acheté.</span></h2>
       <p ${a(4)} style="margin-top:14px"><span class="p">Chaque jour, sans exception, pour accompagner et équiper les personnes sourdes et malentendantes.</span></p>
       <div class="grow"></div>
-      <div ${a(6)}><div class="eq"><div><b style="color:var(--gold)">${C.cause.raised}</b><span>déjà reversés</span></div><div class="op"></div><div><b>2</b><span>références : grains et capsules</span></div></div></div>
+      <div ${a(6)}><div class="eq one"><div><b style="color:var(--gold)">${C.cause.raised}</b><span>déjà collectés pour la cause</span></div></div></div>
       <p ${a(7)} style="margin-top:18px"><span class="small">L’association bénéficiaire est en cours de sélection et sera présentée très bientôt.</span></p>`],
 
     // 3 · Notre histoire
@@ -99,8 +99,8 @@
 
     // 10 · Contact
     ["kaki", "contact", `
-      <p ${a(1)}><span class="eyebrow">Qui sommes-nous</span></p>
-      <h2 ${a(2)} style="margin-top:14px"><span class="h" style="font-size:36px">Faisons de vos samedis<br><em>des samedis YAKA.</em></span></h2>
+      <p ${a(1)}><span class="eyebrow">Contact</span></p>
+      <h2 ${a(2)} style="margin-top:14px"><span class="h" style="font-size:36px">Faisons de vos samedis<br><em>des samedis Maison YAKA.</em></span></h2>
       <div class="grow"></div>
       <div ${a(3)}><div class="people">${C.founders.map((p) => `<figure><img src="${p.image}" alt="${p.name}"><figcaption>${p.name}</figcaption></figure>`).join("")}</div></div>
       <div class="grow"></div>

@@ -167,7 +167,7 @@ window.YAKA_CONTENT = {
       title: "Des causes qui\nnous tiennent à cœur.",
       intro: "La surdité est au cœur de notre histoire. Au-delà, Maison YAKA souhaite soutenir des associations qui agissent pour les enfants, les familles et la santé.",
       items: [
-        { name: "ANPEDA", full: "Fédération de parents d’enfants sourds ou malentendants", tag: "Surdité et malentendance", logo: null,
+        { name: "ANPEDA", full: "Fédération de parents d’enfants sourds ou malentendants", tag: "Surdité et malentendance", logo: "assets/asso-anpeda.png",
           text: "L’ANPEDA accompagne les familles et défend les droits des enfants sourds ou malentendants afin de favoriser leur inclusion, leur autonomie et leur épanouissement." },
         { name: "Petits Princes", full: "Association Petits Princes", tag: "Enfants malades", logo: "assets/asso-petits-princes.jpg",
           text: "L’Association Petits Princes réalise les rêves d’enfants et d’adolescents gravement malades afin de leur offrir des moments d’évasion, de joie et d’espoir pendant leur parcours de soins." },

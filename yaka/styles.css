@@ -1163,3 +1163,10 @@ html { scroll-snap-type: none; }
 .s-asso .cards { padding-top: calc(var(--u) * 2.6); }
 .s-asso .logo-box { height: calc(var(--u) * 9.5); }
 @media (max-width: 900px), (max-aspect-ratio: 4/5) { .s-asso .title { font-size: 38px; } .s-asso .cards { padding-top: 0; } .s-asso .logo-box { height: 120px; } }
+/* Logos des associations : plus grands */
+.s-asso .logo-box { height: calc(var(--u) * 13); padding: calc(var(--u) * .9); }
+.s-asso .title { font-size: calc(var(--u) * 3.6); }
+.s-asso .cards { padding-top: calc(var(--u) * 2); }
+.s-asso .asso-card { padding: calc(var(--u) * 1.6); }
+.s-asso .asso-card p { font-size: calc(var(--u) * .98); }
+@media (max-width: 900px), (max-aspect-ratio: 4/5) { .s-asso .logo-box { height: 150px; padding: 12px; } .s-asso .title { font-size: 38px; } }

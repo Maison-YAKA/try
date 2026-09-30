@@ -1134,3 +1134,32 @@ body[data-slide="cover"] .brandmark { opacity: 0; pointer-events: none; }
 /* Défilement libre + recalage doux (voir app.js) : pas de snap forcé */
 html { scroll-snap-type: none; }
 .slide { scroll-snap-align: none; }
+
+/* ---------- Les associations ------------------------------------------- */
+.s-asso { display: flex; flex-direction: column; }
+.s-asso .head { display: grid; grid-template-columns: 1.1fr 1fr; gap: calc(var(--u) * 6); align-items: end; }
+.s-asso .title { font-size: calc(var(--u) * 4.4); line-height: 1.02; margin-top: calc(var(--u) * 2); }
+.s-asso .intro { font-size: var(--fs-s); line-height: 1.55; color: var(--fg); max-width: 32em; }
+.s-asso .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: calc(var(--u) * 2.4); margin-top: auto; }
+.s-asso .asso-card { background: rgba(255, 255, 255, .45); border: 1px solid var(--fg-10); padding: calc(var(--u) * 2); display: flex; flex-direction: column; }
+.s-asso .logo-box { height: calc(var(--u) * 12); background: #fff; display: flex; align-items: center; justify-content: center; padding: calc(var(--u) * 1.4); margin-bottom: calc(var(--u) * 1.6); }
+.s-asso .logo-box img { max-height: 100%; max-width: 100%; object-fit: contain; }
+.s-asso .wordmark { font-family: var(--sans); font-weight: 600; font-size: calc(var(--u) * 3); letter-spacing: .12em; color: #1C2418; }
+.s-asso .tag { font-size: var(--fs-label); letter-spacing: .24em; color: #7d6a42; font-weight: 500; }
+.s-asso h3 { font-weight: 400; font-size: calc(var(--u) * 1.75); line-height: 1.15; margin-top: calc(var(--u) * .7); }
+.s-asso .asso-card p { margin-top: calc(var(--u) * .9); font-size: calc(var(--u) * 1); line-height: 1.55; color: var(--fg); }
+.s-asso .note { margin-top: calc(var(--u) * 1.6); font-size: calc(var(--u) * .9); color: var(--fg-70); }
+@media (max-width: 900px), (max-aspect-ratio: 4/5) {
+  .s-asso .head { grid-template-columns: 1fr; gap: 20px; }
+  .s-asso .title { font-size: 38px; }
+  .s-asso .cards { grid-template-columns: 1fr; gap: 16px; margin-top: 32px; }
+  .s-asso .logo-box { height: 120px; }
+  .s-asso .asso-card p { font-size: 15px; }
+  .s-asso h3 { font-size: 22px; }
+  .s-asso .intro { font-size: 16px; }
+  .s-asso .note { font-size: 12px; }
+}
+.s-asso .title { font-size: calc(var(--u) * 4); }
+.s-asso .cards { padding-top: calc(var(--u) * 2.6); }
+.s-asso .logo-box { height: calc(var(--u) * 9.5); }
+@media (max-width: 900px), (max-aspect-ratio: 4/5) { .s-asso .title { font-size: 38px; } .s-asso .cards { padding-top: 0; } .s-asso .logo-box { height: 120px; } }

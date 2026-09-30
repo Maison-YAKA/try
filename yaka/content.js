@@ -161,6 +161,22 @@ window.YAKA_CONTENT = {
       closing: "Une Maison ne se définit pas seulement par ce qu’elle vend.\nElle se définit aussi par ce qu’elle choisit de défendre.",
     },
 
+    associations: {
+      nav: "Les associations",
+      label: "Les associations",
+      title: "Des causes qui\nnous tiennent à cœur.",
+      intro: "La surdité est au cœur de notre histoire. Au-delà, Maison YAKA souhaite soutenir des associations qui agissent pour les enfants, les familles et la santé.",
+      items: [
+        { name: "ANPEDA", full: "Fédération de parents d’enfants sourds ou malentendants", tag: "Surdité et malentendance", logo: null,
+          text: "L’ANPEDA accompagne les familles et défend les droits des enfants sourds ou malentendants afin de favoriser leur inclusion, leur autonomie et leur épanouissement." },
+        { name: "Petits Princes", full: "Association Petits Princes", tag: "Enfants malades", logo: "assets/asso-petits-princes.jpg",
+          text: "L’Association Petits Princes réalise les rêves d’enfants et d’adolescents gravement malades afin de leur offrir des moments d’évasion, de joie et d’espoir pendant leur parcours de soins." },
+        { name: "FRM", full: "Fondation pour la Recherche Médicale", tag: "Recherche médicale", logo: "assets/asso-frm.jpg",
+          text: "La FRM soutient et finance la recherche médicale française sur de nombreuses maladies afin de faire progresser les connaissances, les traitements et, à terme, sauver des vies." },
+      ],
+      note: "Associations que Maison YAKA souhaite soutenir. Les modalités de soutien sont en cours de définition.",
+    },
+
     interlude: {
       nav: "Quatre terres",
       label: "Les origines",

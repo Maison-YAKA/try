@@ -193,3 +193,43 @@ a { color: inherit; }
   .c-gains .gain span { font-size: 14px; } .c-gains .gain { padding: 8px 0; }
   .steps li { font-size: 14px; padding: 7px 0 7px 26px; }
 }
+
+/* ==========================================================================
+   Défilement simple : les cartes s'enchaînent verticalement, au doigt
+   ========================================================================== */
+html, body { height: auto; overflow: visible; overflow-x: hidden; touch-action: auto; overscroll-behavior: auto; user-select: auto; -webkit-user-select: auto; }
+html { scroll-snap-type: y proximity; }
+.stage { position: static; display: block; }
+.deck, .deck.scroll { width: 100%; max-width: 520px; height: auto; margin: 0 auto; aspect-ratio: auto; overflow: visible; touch-action: auto; border-radius: 0; box-shadow: none; }
+.card { position: relative; inset: auto; min-height: 100vh; min-height: 100svh; transform: none; transition: none; will-change: auto; scroll-snap-align: start;
+  padding-top: calc(48px + env(safe-area-inset-top, 0px)); padding-bottom: calc(40px + env(safe-area-inset-bottom, 0px)); }
+.card::after { display: none; }
+.card.c-cover { padding-top: 0; }
+
+/* Histoire */
+.c-deaf .ear { height: 210px; margin-bottom: 8px; }
+.c-deaf .p { opacity: .88; }
+.quote { display: block; font-family: var(--serif); font-style: italic; font-size: 22px; line-height: 1.25; padding-left: 14px; border-left: 1px solid rgba(28,36,24,.3); margin-top: 6px; }
+/* Présence en magasin */
+.flow { list-style: none; }
+.flow li { display: grid; grid-template-columns: 30px 1fr; padding: 11px 0; border-top: 1px solid rgba(242,240,232,.16); }
+.flow li:last-child { border-bottom: 1px solid rgba(242,240,232,.16); }
+.flow em { font-style: normal; font-size: 10px; opacity: .5; font-weight: 600; padding-top: 6px; }
+.flow b { font-family: var(--serif); font-weight: 400; font-size: 22px; line-height: 1.1; }
+.flow span { grid-column: 2; font-size: 14px; line-height: 1.45; opacity: .8; margin-top: 3px; }
+.card.kaki .box.us { background: rgba(242,240,232,.06); border: 1px solid rgba(245,212,165,.3); }
+/* Étudiants (fond clair) */
+.card.sand .tags span { color: #7d6a42; border-color: rgba(125,106,66,.4); }
+.card.ivory .box.you li, .card.sand .box li { font-size: 14px; }
+.c-people .tags { gap: 6px; } .c-people .tags span { padding: 6px 10px; font-size: 10px; }
+.c-onsite .box.us { margin-top: 0; }
+@media print {
+  .card { min-height: 0; }
+  .c-deaf .ear { height: 170px; margin-bottom: 0; }
+  .c-deaf .h { font-size: 28px !important; }
+  .c-deaf .p { font-size: 12.5px; line-height: 1.45; }
+  .c-deaf .stack > * + * { margin-top: 9px; }
+  .c-deaf .quote { font-size: 18px; }
+  .c-onsite .p { font-size: 13px; line-height: 1.45; }
+  .c-onsite .flow li { padding: 8px 0; }
+}

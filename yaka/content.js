@@ -18,7 +18,7 @@ window.YAKA_CONTENT = {
   /* ---------- Général ---------------------------------------------------- */
   meta: {
     brand: "Maison YAKA",
-    documentTitle: "Maison YAKA — Accueillir un stand café dans votre magasin",
+    documentTitle: "Maison YAKA — Un partenariat café pour votre magasin",
     edition: "Animation café en magasin · Présentation magasins",
     audience: "Magasins partenaires",
   },
@@ -48,9 +48,8 @@ window.YAKA_CONTENT = {
     packBack: "assets/pack-grains.webp",    // sachet de grains 250 g (détouré)
     packCaps: "assets/pack-capsules.webp",  // boîte de 20 capsules (détourée)
     beans: "assets/recolte.webp",           // récolte des cerises de café, vue aérienne
-    student: "assets/etudiant.webp",        // étudiant Maison YAKA au stand
+    student: "assets/etudiant.webp",        // étudiant Maison YAKA en magasin
     ear: "assets/oreille.jpg",              // oreille formée par une foule
-    onsite: "assets/stand.webp",            // le stand Maison YAKA en magasin
   },
 
   /* ---------- Le café ---------------------------------------------------- */
@@ -75,21 +74,10 @@ window.YAKA_CONTENT = {
   /* ---------- L'association ---------------------------------------------- */
   cause: {
     audience: "les personnes sourdes et malentendantes",
-    status: "Engagement en construction",
+    status: "Démarche en construction, modalités à définir ensemble",
     partnerName: null,          // à renseigner uniquement lorsqu’un partenariat sera officiel
   },
 
-  /* ---------- Vente terrain (autre catégorie de produit) ----------------- */
-  field: {
-    target: 240,
-    average: 340,
-    founderRevenue: 416,
-    best: 750,
-    lowest: 180,
-    founderSales: 34,
-    salesHypothesis: 24,
-    disclaimer: "Résultats observés lors d’une journée de vente sur stand, avec une autre catégorie de produit. Ce sont des observations, pas une prévision ni une garantie de performance pour Maison YAKA.",
-  },
 
   /* ---------- Écrans ----------------------------------------------------- */
   slides: {
@@ -99,10 +87,10 @@ window.YAKA_CONTENT = {
       tagline: "L’animation café en magasin,\nsimple et solidaire.",
       eyebrow: "Maison YAKA · Animation café en magasin",
       headline: "Un grand café.\nUn geste qui compte.",
-      lead: "Accueillez ponctuellement un stand Maison YAKA : vos clients découvrent un café premium, un étudiant vit une expérience rémunérée et le projet soutient une démarche solidaire.",
+      lead: "Accueillez régulièrement un étudiant Maison YAKA : vos clients découvrent un café premium, un étudiant vit une expérience rémunérée et le projet soutient une démarche solidaire.",
       facts: [
-        ["1", "emplacement de quelques mètres carrés"],
-        ["1", "étudiant présent sur le stand"],
+        ["1", "petit emplacement, sans installation lourde"],
+        ["1", "étudiant présent, principalement le samedi"],
         ["100 %", "Arabica, quatre origines"],
       ],
     },
@@ -113,10 +101,10 @@ window.YAKA_CONTENT = {
       title: "Chacun y gagne,\nà commencer par vous.",
       hint: "Survolez le cercle",
       nodes: [
-        { name: "Magasin",     does: "accueille un stand Maison YAKA",  gets: "Une animation qualitative et simple à accueillir, qui apporte une expérience supplémentaire aux clients tout en soutenant une initiative étudiante et solidaire." },
-        { name: "Étudiant",    does: "présente et vend le café",         gets: "Une expérience commerciale concrète, rémunérée et professionnalisante, directement au contact des clients." },
-        { name: "Client",      does: "déguste et échange",               gets: "La découverte d’un café premium à travers un échange humain, directement dans son magasin habituel." },
-        { name: "Maison YAKA", does: "organise l’animation",             gets: "Une rencontre directe avec ses clients et la possibilité de développer la marque sur le terrain tout en faisant grandir ses engagements." },
+        { name: "Magasin",     does: "accueille un étudiant Maison YAKA",  gets: "Une présence qualitative et simple à accueillir, qui apporte une expérience supplémentaire à vos clients tout en soutenant une initiative étudiante et solidaire." },
+        { name: "Étudiant",    does: "va à la rencontre des clients",      gets: "Une expérience commerciale concrète, rémunérée et professionnalisante, directement au contact des clients." },
+        { name: "Client",      does: "découvre, échange, partage",          gets: "Une rencontre simple et humaine autour du café : l’histoire de Maison YAKA, notre engagement, puis un café premium à emporter s’il le souhaite." },
+        { name: "Maison YAKA", does: "organise sa présence",               gets: "Une rencontre directe avec ses clients et la possibilité de développer la marque sur le terrain tout en faisant grandir ses engagements." },
       ],
       loop: "… et une démarche solidaire qui avance.",
     },
@@ -125,47 +113,52 @@ window.YAKA_CONTENT = {
       nav: "Fonctionnement",
       label: "Comment ça fonctionne",
       title: "Vous nous accueillez.\nNous nous occupons du reste.",
-      lead: "Installation, présence de l’étudiant, présentation des produits, encaissement et rangement : Maison YAKA prend en charge l’animation du stand.",
+      lead: "Installation, présence de l’étudiant, présentation du café, encaissement et rangement : Maison YAKA prend tout en charge.",
       yakaTitle: "Une journée Maison YAKA, en cinq étapes",
       yaka: [
         { who: "Votre magasin", what: "met à disposition un petit emplacement" },
-        { who: "Maison YAKA",   what: "installe et organise le stand" },
-        { who: "Un étudiant",   what: "présente et vend les produits" },
-        { who: "Maison YAKA",   what: "gère l’encaissement" },
+        { who: "Maison YAKA",   what: "installe sa pancarte et ses références" },
+        { who: "Un étudiant",   what: "présente Maison YAKA, raconte notre café et va à la rencontre de vos clients" },
+        { who: "Maison YAKA",   what: "gère l’encaissement, avec son propre terminal" },
         { who: "Maison YAKA",   what: "range et libère l’emplacement" },
       ],
       storeTitle: "De votre côté",
       store: [
-        "Un emplacement dans une allée passante",
-        "Surface : [[à préciser]]",
-        "Une ou plusieurs dates, choisies avec vous",
-        "Horaires : [[à caler ensemble]]",
+        "Un emplacement dans le hall d’entrée, le sas de sortie ou tout autre espace convenu avec vous",
+        "Une présence régulière, principalement le samedi, à un rythme défini ensemble",
+        "Horaires à discuter : environ 6 h 30 à 7 h le samedi, par exemple 10 h – 13 h et 14 h – 17 h 30 / 18 h",
       ],
-      note: "Un fonctionnement simple pour vos équipes. Une table peut suffire.",
+      note: "Nous nous adaptons à la configuration et au fonctionnement de votre magasin.",
     },
 
     cause: {
       nav: "Notre engagement",
       label: "Notre engagement",
       title: "Votre magasin\nprend aussi part\nà notre engagement.",
-      body: "En accueillant Maison YAKA et en mettant un emplacement à disposition, vous permettez à notre projet de se développer et contribuez indirectement à une démarche qui nous tient personnellement à cœur : agir autour de la surdité.",
+      body: "En accueillant Maison YAKA, votre magasin participe concrètement à la dynamique qui nous permet de collecter des fonds et de développer notre engagement autour de la surdité et de la malentendance.",
       statusLabel: "Statut",
-      honesty: "Les partenaires et les modalités de soutien seront présentés lorsqu’ils seront officialisés.",
-      quote: "Un emplacement de quelques mètres carrés peut devenir bien plus qu’un simple stand.",
+      honesty: "Cette démarche se construit avec nos partenaires ; ses modalités peuvent être discutées avec vous.",
+      lightTitle: "Une présence volontairement légère",
+      light: "Un étudiant, quelques références, notre pancarte Maison YAKA et un terminal de paiement. Aucune installation lourde n’est nécessaire. Si vous disposez d’une petite table, elle peut simplement servir de support ; dans le cas contraire, nous adaptons notre présence à votre espace.",
       gifts: [
         ["Une opportunité", "pour un étudiant"],
         ["Une découverte", "pour vos clients"],
-        ["Une contribution indirecte", "à une démarche solidaire"],
+        ["Une contribution collective", "à une démarche solidaire"],
       ],
     },
 
     deaf: {
       nav: "Notre histoire",
       label: "Notre histoire",
-      lead: "Un café se choisit. Une cause se vit.",
-      title: "Maison YAKA commence\npar un silence.",
-      body: "L’un des fondateurs, Yanil, a grandi avec un frère sourd. Les conversations qui s’arrêtent au milieu d’un repas, l’isolement discret du quotidien. Autour d’un café, on se fait face : on lit sur les lèvres, on suit un regard, on répond avec les mains.",
-      closing: "Maison YAKA est d’abord une marque de café. Cette histoire donne du sens à ce que nous construisons et oriente nos engagements autour de la surdité.",
+      lead: "Il existe des moments que l’on croit universels.",
+      title: "Un repas partagé.\nUne conversation.\nUne pause café.",
+      paragraphs: [
+        "Pour beaucoup, ce sont des instants ordinaires. Pour d’autres, suivre une discussion lorsque les voix se croisent, que les regards se détournent ou que plusieurs personnes parlent en même temps peut transformer un moment collectif en moment de solitude.",
+        "Yanil, cofondateur de Maison YAKA, a grandi aux côtés d’un frère malentendant. Très tôt, il a compris que communiquer ne consistait pas seulement à parler : il fallait regarder, attendre, s’adapter, et parfois apprendre à écouter autrement.",
+        "En créant Maison YAKA, nous ne voulions pas chercher artificiellement une cause à associer à notre marque. Nous voulions que notre Maison serve, à son échelle, une cause qui faisait déjà partie de notre histoire.",
+        "Le café portait naturellement ce lien. La pause café est précisément l’un de ces moments où l’on s’arrête pour parler, où les collègues se retrouvent, où l’on échange quelques minutes autrement. Nous voulons contribuer à ce que ces moments de lien n’oublient personne.",
+      ],
+      closing: "Une Maison ne se définit pas seulement par ce qu’elle vend.\nElle se définit aussi par ce qu’elle choisit de défendre.",
     },
 
     interlude: {
@@ -186,54 +179,58 @@ window.YAKA_CONTENT = {
     people: {
       nav: "Les étudiants",
       label: "Les étudiants",
-      formula: [["1", "étudiant"], ["1", "stand"], ["2", "références"], ["1", "journée"]],
+      formula: [["1", "étudiant"], ["1", "pancarte"], ["2", "références"], ["1", "samedi"]],
       title: "Faire grandir\nles talents.",
-      body: "Sur le stand, c’est un étudiant qui accueille vos clients, présente le café et le vend. Une expérience commerciale concrète, rémunérée et encadrée par Maison YAKA.",
-      skills: ["Prise de parole", "Confiance", "Conseil", "Vente", "Relation client", "Responsabilité", "Expérience professionnelle"],
+      body: "Sur place, un étudiant va à la rencontre de vos clients, présente Maison YAKA et raconte notre café. Il est rémunéré et accompagné par Maison YAKA.",
+      mission: "Chaque étudiant arrive avec un stock défini pour sa journée, autour d’une soixantaine de paquets selon l’organisation retenue. Il ne s’agit pas de lui mettre une pression artificielle, mais de lui confier une vraie mission commerciale, concrète et mesurable, où chaque vente fait avancer le projet et l’engagement de Maison YAKA.",
+      skills: ["Aller vers les clients", "Présenter un café premium", "Raconter une histoire", "Expliquer notre engagement", "Argumenter", "Vendre", "Progresser sur le terrain"],
       quote: "Une journée de terrain.\nUne expérience qui compte.",
       network: "Accueillir, conseiller, vendre : des compétences utiles, acquises face à de vrais clients.",
-      photoCaption: "Étudiant Maison YAKA au stand",
-    },
-
-    proof: {
-      nav: "Le terrain",
-      label: "Le terrain",
-      title: "La vente en direct,\nnous savons la faire.",
-      claim: "Des chiffres observés face à de vrais clients.",
+      photoCaption: "Étudiant Maison YAKA en magasin",
     },
 
     meeting: {
-      nav: "Le stand",
-      label: "Le stand en magasin",
-      lines: ["Le produit attire.", "La dégustation convainc.", "L’échange fait vendre."],
-      body: "Un étudiant formé, un stand épuré installé rapidement, des dégustations et un vrai échange avec vos clients.",
-      qualities: ["Stand épuré", "Installation rapide", "Dégustations", "Encaissement géré par Maison YAKA"],
-      optionsTitle: "Et si vous le souhaitez, en rayon",
+      nav: "En magasin",
+      label: "Notre présence en magasin",
+      steps: [
+        ["Un étudiant", "Il va à la rencontre de vos clients."],
+        ["Le café et l’histoire", "Il présente Maison YAKA, explique notre café et raconte notre engagement."],
+        ["L’échange", "Il échange simplement avec le client et répond à ses questions."],
+        ["La vente", "Le client peut ensuite acheter l’une de nos références."],
+      ],
+      body: "Chaque étudiant est formé avant sa présence en magasin : connaissance du café, histoire de Maison YAKA, engagement et approche client. Notre dispositif reste volontairement épuré afin de créer un échange naturel, sans perturber le fonctionnement du magasin. Quelques minutes de conversation, la découverte d’un café et d’une histoire : un moment simple qui fait avancer un projet plus grand.",
+      kitTitle: "L’étudiant dispose simplement",
+      kit: ["De son stock de café", "D’une petite pancarte Maison YAKA présentant la marque, le café et notre engagement", "D’un terminal de paiement fourni par Maison YAKA", "D’une petite table, uniquement si vous souhaitez en mettre une à disposition"],
+      optionsTitle: "Nos deux références",
       options: [
-        ["Deux références", "Un sachet de grains 250 g et une boîte de 20 capsules, à 14,90 € chacun."],
-        ["Kit de merchandising", "Display de comptoir épuré, fiches origines et argumentaire de vente fournis avec la première commande."],
+        ["Café en grains", "Sachet de 250 g · 14,90 €"],
+        ["Café en capsules", "Boîte de 20 capsules · 14,90 €"],
       ],
     },
 
     pilot: {
-      nav: "Notre proposition",
+      nav: "Partenariat",
       label: "Notre proposition",
-      titleGeneric: "Une première date\nMaison YAKA chez vous.",
-      titlePartner: "Une première date\nMaison YAKA à {city}.",
-      formula: [["1", "emplacement"], ["1", "étudiant"], ["1", "date à convenir"], ["1", "bilan partagé"]],
-      askTitle: "Ce que nous vous demandons",
-      asks: ["Un emplacement dans une allée passante", "Une première date, puis d’autres si l’expérience vous convient", "Cet emplacement mis à disposition gracieusement, ou à tarif solidaire"],
-      askWhy: "Un emplacement gracieux ou solidaire nous permet de consacrer nos moyens au projet, aux étudiants et à nos engagements.",
-      measureTitle: "Ce que vous recevez après chaque journée",
-      measures: ["Ventes et transactions", "Retours de vos clients", "Retour de vos équipes"],
-      line: "Une animation pour vos clients,\nune expérience pour un étudiant,\net si vous le souhaitez, un référencement en rayon.",
+      titleGeneric: "Construisons\nun partenariat.",
+      titlePartner: "Construisons\nun partenariat à {city}.",
+      formula: [["1", "petit emplacement"], ["1", "étudiant formé"], ["2", "références"], ["1", "rendez-vous régulier, le samedi"]],
+      askTitle: "Ce que nous recherchons",
+      asks: [
+        "Un petit emplacement dans une zone passante : hall, sas d’entrée ou de sortie, ou tout espace convenu avec vous",
+        "Une présence principalement le samedi",
+        "Un partenariat régulier plutôt qu’une animation isolée",
+      ],
+      askWhy: "Idéalement, cet emplacement est mis à disposition à titre gracieux ou à tarif solidaire : cela nous permet de consacrer nos moyens aux étudiants, au café et à notre engagement.",
+      followTitle: "Suivi du partenariat",
+      follow: "Un bilan peut être transmis en fin de mois afin de partager avec vous l’activité réalisée et l’évolution du partenariat.",
+      line: "Si vous souhaitez aller plus loin, nous pourrons également échanger sur un éventuel référencement de Maison YAKA directement en rayon.",
     },
 
     founders: {
       nav: "Qui sommes-nous",
       label: "Qui sommes-nous",
       title: "Deux entrepreneurs.\nLe goût du terrain.\nUn engagement sincère.",
-      body: "Yanil et Arthur ont créé Maison YAKA. Ils recrutent, forment et accompagnent les étudiants qui présentent le café dans vos allées.\n\nUn café premium, une vente humaine et un engagement qui les touche de près.",
+      body: "Maison YAKA est née d’une conviction simple : une belle marque ne se construit pas uniquement derrière un écran, mais au contact des personnes qui la découvrent. Yanil et Arthur, deux jeunes entrepreneurs, ont donc choisi de commencer sur le terrain.\n\nNotre café a été choisi avec la même exigence que celle que nous voulons donner à notre Maison : un café premium, accessible et agréable à boire. Le goût reste le point de départ ; l’humain lui donne du sens.\n\nÀ chaque rencontre en magasin, nous construisons une Maison qui réunit qualité, entrepreneuriat et engagement.",
     },
 
     cta: {

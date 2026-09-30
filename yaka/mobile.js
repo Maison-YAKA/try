@@ -4,7 +4,7 @@
    ========================================================================== */
 (function () {
   "use strict";
-  const C = window.YAKA_CONTENT, S = C.slides, cf = C.coffee, f = C.field, I = C.images;
+  const C = window.YAKA_CONTENT, S = C.slides, cf = C.coffee, I = C.images;
   const fmt = (s) => String(s ?? "").replace(/\[\[(.+?)\]\]/g, "$1").replace(/\n/g, "<br>");
   const a = (d) => `class="a" style="--d:${d}"`;
   const tel = (p) => p.replace(/\s/g, "");
@@ -17,42 +17,44 @@
         <p ${a(2)}><span class="eyebrow">${fmt(S.cover.eyebrow)}</span></p>
         <h1 ${a(3)}><span class="h">Un grand café.<br><em>Un geste qui compte.</em></span></h1>
         <p ${a(5)}><span class="p">${fmt(S.cover.lead)}</span></p>
-        <p ${a(8)}><span class="hint">Touchez pour découvrir <i></i></span></p>
+        <p ${a(8)}><span class="hint">Faites défiler <i></i></span></p>
       </div>`],
 
     // 2 · Chacun y gagne
     ["sand", "gains", `
       <p ${a(1)}><span class="eyebrow">${S.model.label}</span></p>
-      <h2 ${a(2)} style="margin-top:14px"><span class="h">Chacun y gagne,<br><em>à commencer par vous.</em></span></h2>
+      <h2 class="a" style="--d:2;margin-top:14px"><span class="h">Chacun y gagne,<br><em>à commencer par vous.</em></span></h2>
       <div class="grow"></div>
       <div ${a(4)}>${S.model.nodes.map((n) => `<div class="gain"><b>${n.name}</b><span>${n.gets}</span></div>`).join("")}</div>`],
 
     // 3 · Fonctionnement
     ["ivory", "turnkey", `
       <p ${a(1)}><span class="eyebrow">${S.turnkey.label}</span></p>
-      <h2 ${a(2)} style="margin-top:14px"><span class="h">Vous nous accueillez.<br><em>Nous nous occupons du reste.</em></span></h2>
-      <p ${a(3)} style="margin-top:14px"><span class="p">${fmt(S.turnkey.lead)}</span></p>
+      <h2 class="a" style="--d:2;margin-top:14px"><span class="h">Vous nous accueillez.<br><em>Nous nous occupons du reste.</em></span></h2>
+      <p class="a" style="--d:3;margin-top:14px"><span class="p">${fmt(S.turnkey.lead)}</span></p>
       <div class="grow"></div>
       <ul class="a ask steps" style="--d:4">${S.turnkey.yaka.map((x, i) => `<li data-n="0${i + 1}"><b>${x.who}</b> ${x.what}</li>`).join("")}</ul>
-      <p ${a(5)} style="margin-top:14px"><span class="small">${fmt(S.turnkey.note)}</span></p>`],
+      <div class="a" style="--d:5;margin-top:16px"><div class="box you"><h4>${S.turnkey.storeTitle}</h4><ul>${S.turnkey.store.map((x) => `<li>${fmt(x)}</li>`).join("")}</ul></div></div>`],
 
     // 4 · Notre engagement
     ["kaki", "engage", `
       <p ${a(1)}><span class="eyebrow">${S.cause.label}</span></p>
-      <h2 ${a(2)} style="margin-top:14px"><span class="h" style="font-size:32px">Votre magasin prend part<br><em>à notre engagement.</em></span></h2>
-      <p ${a(3)} style="margin-top:14px"><span class="p">${fmt(S.cause.body)}</span></p>
+      <h2 class="a" style="--d:2;margin-top:14px"><span class="h" style="font-size:32px">Votre magasin prend part<br><em>à notre engagement.</em></span></h2>
+      <p class="a" style="--d:3;margin-top:14px"><span class="p">${fmt(S.cause.body)}</span></p>
+      <p class="a" style="--d:4;margin-top:18px"><span class="eyebrow">${S.cause.lightTitle}</span></p>
+      <p class="a" style="--d:4;margin-top:8px"><span class="p">${fmt(S.cause.light)}</span></p>
       <div class="grow"></div>
-      <div ${a(4)}>${S.cause.gifts.map(([h, t]) => `<div class="gain"><span>${h}</span><b>${t}</b></div>`).join("")}</div>
-      <p ${a(5)} style="margin-top:16px"><span class="small">${fmt(S.cause.honesty)}</span></p>`],
+      <div ${a(5)}>${S.cause.gifts.map(([h, t]) => `<div class="gain"><span>${h}</span><b>${t}</b></div>`).join("")}</div>
+      <p class="a" style="--d:6;margin-top:14px"><span class="small">${fmt(S.cause.honesty)}</span></p>`],
 
     // 5 · Notre histoire
     ["ivory", "deaf", `
       ${I.ear ? `<div class="ear a" style="--d:1"><img src="${I.ear}" alt="Une oreille dessinée par une foule"></div>` : ""}
-      <div class="grow"></div>
       <div class="stack">
         <p ${a(2)}><span class="eyebrow">${fmt(S.deaf.lead)}</span></p>
-        <h2 ${a(3)}><span class="h">${fmt(S.deaf.title)}</span></h2>
-        <p ${a(5)}><span class="p">L’un des fondateurs, Yanil, a grandi avec un frère sourd. Autour d’un café, on se fait face : on lit sur les lèvres, on suit un regard, on répond avec les mains.</span></p>
+        <h2 ${a(3)}><span class="h" style="font-size:34px">${fmt(S.deaf.title)}</span></h2>
+        ${S.deaf.paragraphs.map((x) => `<p ${a(5)}><span class="p">${fmt(x)}</span></p>`).join("")}
+        <p ${a(6)}><span class="quote">${fmt(S.deaf.closing)}</span></p>
       </div>`],
 
     // 6 · Le café
@@ -65,40 +67,38 @@
         <p ${a(5)}><span class="small">100&#8239;% Arabica · Brésil, Pérou, Colombie, Éthiopie · medium-dark · profil doux et chocolaté</span></p>
       </div>`],
 
-    // 7 · Le stand
+    // 7 · Présence en magasin
     ["kaki", "onsite", `
       <p ${a(1)}><span class="eyebrow">${S.meeting.label}</span></p>
-      <h2 ${a(2)} style="margin-top:14px"><span class="h">Le produit attire.<br>La dégustation convainc.<br><em>L’échange fait vendre.</em></span></h2>
-      ${I.onsite ? `<div class="shot a" style="--d:3"><img src="${I.onsite}" alt="Le stand Maison YAKA en magasin"></div>` : '<div class="grow"></div>'}
-      <p ${a(4)}><span class="p">${fmt(S.meeting.body)}</span></p>
-      <div ${a(5)} style="margin-top:12px"><div class="tags">${S.meeting.qualities.slice(1).map((q) => `<span>${q}</span>`).join("")}</div></div>`],
+      <ul class="a flow" style="--d:2;margin-top:16px">${S.meeting.steps.map(([h, t], i) => `<li><em>0${i + 1}</em><b>${h}</b><span>${fmt(t)}</span></li>`).join("")}</ul>
+      <div class="a" style="--d:3;margin-top:18px"><div class="box us"><h4>${S.meeting.kitTitle}</h4><ul>${S.meeting.kit.map((x) => `<li>${fmt(x)}</li>`).join("")}</ul></div></div>
+      <p class="a" style="--d:4;margin-top:16px"><span class="p">${fmt(S.meeting.body)}</span></p>`],
 
-    // 8 · Le terrain
-    ["dark", "proof", `
-      <p ${a(1)}><span class="eyebrow">Le terrain</span></p>
-      <h2 ${a(2)} style="margin-top:14px"><span class="h" style="font-size:32px">La vente en direct,<br><em>nous savons la faire.</em></span></h2>
+    // 8 · Les étudiants
+    ["sand", "people", `
+      <p ${a(1)}><span class="eyebrow">${S.people.label}</span></p>
+      <h2 class="a" style="--d:2;margin-top:14px"><span class="h">Faire grandir<br><em>les talents.</em></span></h2>
       <div class="grow"></div>
-      <div ${a(3)}><div class="big"><span class="t">~</span>${f.average}<small>&#8239;€</small></div></div>
-      <p ${a(4)} style="margin-top:10px"><span class="eyebrow" style="color:inherit;opacity:.7">CA moyen observé par vendeur · objectif ${f.target}&#8239;€</span></p>
-      <div class="grow"></div>
-      <div ${a(5)}><div class="stats"><div><b>${f.best}&#8239;€</b><span>meilleure journée</span></div><div><b>${f.founderRevenue}&#8239;€</b><span>un fondateur</span></div><div><b>${f.founderSales}</b><span>ventes en un jour</span></div></div></div>
-      <p ${a(6)} style="margin-top:16px"><span class="small">${f.disclaimer}</span></p>`],
+      <p ${a(3)}><span class="p">${fmt(S.people.body)}</span></p>
+      <p class="a" style="--d:4;margin-top:12px"><span class="p">${fmt(S.people.mission)}</span></p>
+      <div class="a" style="--d:5;margin-top:16px"><div class="tags">${S.people.skills.map((q) => `<span>${q}</span>`).join("")}</div></div>`],
 
     // 9 · Proposition
     ["sand", "pilot", `
-      <p ${a(1)}><span class="eyebrow">Notre proposition</span></p>
-      <h2 ${a(2)} style="margin-top:14px"><span class="h" style="font-size:31px">Une première date<br><em>Maison YAKA chez vous.</em></span></h2>
+      <p ${a(1)}><span class="eyebrow">${S.pilot.label}</span></p>
+      <h2 class="a" style="--d:2;margin-top:14px"><span class="h">Construisons<br><em>un partenariat.</em></span></h2>
       <div class="grow"></div>
-      <div ${a(3)}><div class="formula">${S.pilot.formula.map(([v, k]) => `<div><b>${v}</b><span>${k}</span></div>`).join("")}</div></div>
-      <div class="grow"></div>
-      <p ${a(4)}><span class="eyebrow">Ce que nous vous demandons</span></p>
-      <ul class="a ask" style="--d:5;margin-top:6px">${S.pilot.asks.map((x, i) => `<li data-n="0${i + 1}">${x}</li>`).join("")}</ul>`],
+      <p ${a(3)}><span class="eyebrow">${S.pilot.askTitle}</span></p>
+      <ul class="a ask" style="--d:4;margin-top:6px">${S.pilot.asks.map((x, i) => `<li data-n="0${i + 1}">${x}</li>`).join("")}</ul>
+      <p class="a" style="--d:5;margin-top:10px"><span class="p">${fmt(S.pilot.askWhy)}</span></p>
+      <p class="a" style="--d:6;margin-top:18px"><span class="eyebrow">${S.pilot.followTitle}</span></p>
+      <p class="a" style="--d:6;margin-top:6px"><span class="p">${fmt(S.pilot.follow)} ${fmt(S.pilot.line)}</span></p>`],
 
     // 10 · Contact
     ["kaki", "contact", `
       <p ${a(1)}><span class="eyebrow">Contact</span></p>
-      <h2 ${a(2)} style="margin-top:14px"><span class="h" style="font-size:34px">Accueillez Maison YAKA<br><em>dans votre magasin.</em></span></h2>
-      <p ${a(3)} style="margin-top:12px"><span class="p">${fmt(S.cta.body)}</span></p>
+      <h2 class="a" style="--d:2;margin-top:14px"><span class="h" style="font-size:34px">Accueillez Maison YAKA<br><em>dans votre magasin.</em></span></h2>
+      <p class="a" style="--d:3;margin-top:12px"><span class="p">${fmt(S.cta.body)}</span></p>
       <div class="grow"></div>
       <div ${a(3)}><div class="people">${C.founders.map((p) => `<figure><img src="${p.image}" alt="${p.name}"><figcaption>${p.name}</figcaption></figure>`).join("")}</div></div>
       <div class="grow"></div>
@@ -113,101 +113,19 @@
   /* ---------- Montage ---------- */
   const deck = document.getElementById("deck");
   deck.innerHTML = `
-    <div class="bars">${cards.map(() => "<i></i>").join("")}</div>
-    <div class="top"><span class="mark" aria-label="YAKA"></span><span class="count"></span></div>
     ${cards.map(([theme, id, html]) => `<section class="card ${theme} c-${id}" id="${id}">${html}</section>`).join("")}`;
-  const els = [...deck.querySelectorAll(".card")], bars = [...deck.querySelectorAll(".bars i")], count = deck.querySelector(".count");
-  const DUR = [7, 11, 10, 10, 8, 8, 9, 9, 9, 0];
+  const els = [...deck.querySelectorAll(".card")];
 
   if (/[?&]print\b/.test(location.search)) { els.forEach((e) => e.classList.add("on")); return; }
 
-  /* ---------- Carrousel suivant le doigt ---------- */
-  let cur = -1, timer = 0, paused = false, left = 0, t0 = 0;
-  const N = els.length, W = () => deck.clientWidth;
-
-  // Place chaque carte selon sa distance à la carte courante (+ décalage du doigt)
-  function place(offset, animate) {
-    deck.classList.toggle("dragging", !animate);
-    const w = W();
-    els.forEach((e, k) => {
-      const rel = (k - cur) + offset / w;                 // -1 … 0 … 1
-      if (Math.abs(rel) > 1.2) { e.style.visibility = "hidden"; e.style.transform = `translate3d(${Math.sign(rel) * 110}%,0,0)`; return; }
-      e.style.visibility = "visible";
-      const x = rel * 100, sc = 1 - Math.min(1, Math.abs(rel)) * .08;
-      e.style.transform = `translate3d(${x}%,0,0) scale(${sc})`;
-      e.style.setProperty("--shade", Math.min(1, Math.abs(rel)).toFixed(3));
-      e.style.zIndex = rel <= 0 ? 2 : 1;
-    });
-  }
-
-  function show(i, instant) {
-    i = Math.max(0, Math.min(N - 1, i));
-    const changed = i !== cur;
-    cur = i;
-    place(0, !instant);
-    if (!changed) return;
-    els.forEach((e, k) => { e.classList.toggle("on", k === i); e.classList.toggle("peek", Math.abs(k - i) === 1); });
-    bars.forEach((b, k) => { b.classList.toggle("done", k < i); b.classList.remove("on"); });
-    void bars[i].offsetWidth;
-    deck.classList.toggle("light", /ivory|sand/.test(els[i].className));
-    deck.classList.toggle("cover-on", i === 0);
-    count.textContent = `${String(i + 1).padStart(2, "0")} / ${N}`;
-    try { history.replaceState(null, "", "#" + els[i].id); } catch (e) {}
-    clearTimeout(timer); paused = false; deck.classList.remove("paused");
-    if (navigator.vibrate) try { navigator.vibrate(4); } catch (e) {}
-    if (DUR[i]) { deck.style.setProperty("--dur", DUR[i] + "s"); bars[i].classList.add("on"); schedule(DUR[i] * 1000); }
-    else bars[i].classList.add("done");
-  }
-  function schedule(ms) { left = ms; t0 = Date.now(); timer = setTimeout(() => show(cur + 1), ms); }
-  function pause() { if (paused || !DUR[cur]) return; paused = true; deck.classList.add("paused"); clearTimeout(timer); left -= Date.now() - t0; }
-  function resume() { if (!paused) return; paused = false; deck.classList.remove("paused"); schedule(Math.max(400, left)); }
-
-  // Geste : glisser = suivre le doigt ; tap = avancer / reculer ; appui long = pause
-  let sx = 0, sy = 0, st = 0, lx = 0, lt = 0, v = 0, mode = "", holdT = 0, pid = null;
-  deck.addEventListener("pointerdown", (e) => {
-    if (e.target.closest("a") || pid !== null) return;
-    pid = e.pointerId; sx = lx = e.clientX; sy = e.clientY; st = lt = performance.now(); v = 0; mode = "";
-    holdT = setTimeout(() => { if (!mode) { mode = "hold"; pause(); } }, 260);
-  });
-  deck.addEventListener("pointermove", (e) => {
-    if (e.pointerId !== pid) return;
-    const dx = e.clientX - sx, dy = e.clientY - sy, now = performance.now();
-    if (!mode && Math.abs(dx) > 8 && Math.abs(dx) > Math.abs(dy)) { mode = "drag"; clearTimeout(holdT); pause(); try { deck.setPointerCapture(pid); } catch (er) {} }
-    if (mode !== "drag") return;
-    v = (e.clientX - lx) / Math.max(1, now - lt); lx = e.clientX; lt = now;
-    let off = dx;
-    if ((cur === 0 && dx > 0) || (cur === N - 1 && dx < 0)) off = dx * .28;   // résistance aux extrémités
-    place(off, false);
-  });
-  function end(e) {
-    if (e.pointerId !== pid) return;
-    pid = null; clearTimeout(holdT);
-    const dx = e.clientX - sx;
-    if (mode === "drag") {
-      const go = (Math.abs(dx) > W() * .18 || (Math.abs(dx) > 30 && Math.abs(v) > .45)) ? (dx < 0 ? 1 : -1) : 0;
-      const target = Math.max(0, Math.min(N - 1, cur + go));
-      if (target === cur) { place(0, true); resume(); } else show(target);
-      return;
-    }
-    if (mode === "hold") { resume(); return; }
-    if (e.type === "pointercancel") return;
-    const r = deck.getBoundingClientRect();
-    show(cur + (e.clientX - r.left < r.width * .3 ? -1 : 1));
-  }
-  deck.addEventListener("pointerup", end);
-  deck.addEventListener("pointercancel", end);
-  deck.addEventListener("contextmenu", (e) => e.preventDefault());
-  document.addEventListener("keydown", (e) => {
-    if (["ArrowRight", "ArrowDown", " ", "PageDown"].includes(e.key)) { e.preventDefault(); show(cur + 1); }
-    if (["ArrowLeft", "ArrowUp", "PageUp"].includes(e.key)) { e.preventDefault(); show(cur - 1); }
-  });
-  document.addEventListener("visibilitychange", () => (document.hidden ? pause() : resume()));
-  window.addEventListener("resize", () => place(0, false));
-
-  // Précharge toutes les images pour des transitions sans accroc
-  deck.querySelectorAll("img").forEach((im) => { im.decoding = "async"; if (im.decode) im.decode().catch(() => {}); });
-
+  /* ---------- Défilement vertical natif : une carte après l'autre ----------
+     Aucun geste personnalisé : on fait simplement défiler la page au doigt. */
+  deck.classList.add("scroll");
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver((entries) => entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add("on"); }), { threshold: 0.2 });
+    els.forEach((e) => io.observe(e));
+  } else els.forEach((e) => e.classList.add("on"));
+  els[0].classList.add("on");
   const start = els.findIndex((e) => "#" + e.id === location.hash);
-  show(Math.max(0, start), true);
-  requestAnimationFrame(() => deck.classList.remove("dragging"));
+  if (start > 0) els[start].scrollIntoView();
 })();

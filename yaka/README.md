@@ -1,7 +1,7 @@
 # YAKA — Présentation partenaires
 
-Présentation interactive (13 écrans) + export PDF 16:9, version générique pour tous les magasins.
-Ordre : couverture → chacun y gagne (cercle) → fonctionnement (« Vous nous accueillez. Nous nous occupons du reste. », 5 étapes) → engagement (en construction) → histoire → quatre terres → café (grains + capsules) → étudiants → terrain → stand en magasin → proposition (première date) → fondateurs → contact.
+Présentation interactive (12 écrans) + export PDF 16:9, version générique pour tous les magasins.
+Ordre : couverture → chacun y gagne (cercle) → fonctionnement (5 étapes) → engagement → notre histoire (surdité) → quatre terres → café (grains + capsules) → étudiants → présence en magasin (dispositif léger) → partenariat régulier → fondateurs → contact.
 
 Informations café confirmées uniquement : 100 % Arabica, Brésil · Pérou · Colombie · Éthiopie, medium-dark, profil doux et chocolaté, grains 250 g et 20 capsules à 14,90 €.
 Engagement autour de la surdité présenté comme **en construction** : aucun montant, pourcentage ni partenaire n’est annoncé tant que rien n’est officialisé.
@@ -33,9 +33,9 @@ node build.mjs --no-pdf # HTML seulement
 - `assets/` : photos et polices
 
 ## Présenter
-Flèches ← → / ↑ ↓ ou espace pour naviguer · `F` plein écran · `P` export PDF.
+Molette, trackpad, flèches ← → / ↑ ↓ ou espace : un geste = un écran · `F` plein écran · `P` export PDF.
 
 ## Version téléphone
-- `mobile.html` / `mobile.css` / `mobile.js` : 10 cartes plein écran façon « stories » (tap à droite = suivant, à gauche = précédent, appui long = pause, swipe).
+- `mobile.html` / `mobile.css` / `mobile.js` : 10 cartes plein écran qui s'enchaînent en défilement vertical natif (on fait simplement défiler au doigt).
 - Livrables : `dist/YAKA_mobile.html`, `dist/YAKA_mobile.pdf` (format téléphone, 1 carte par page) et `/yaka-mobile.html` à la racine du site.
 - Sur le site, `yaka.html` redirige automatiquement les téléphones vers `yaka-mobile.html` (ajouter `?desktop` pour forcer la version complète).

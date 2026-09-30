@@ -1045,3 +1045,92 @@ body[data-slide="cover"] .brandmark { opacity: 0; pointer-events: none; }
 .s-cause .title { font-size: calc(var(--u) * 4.3); line-height: 1.02; }
 .s-turnkey .cols { margin-top: calc(var(--u) * 3.2); }
 @media (max-width: 900px), (max-aspect-ratio: 4/5) { .s-cause .title { font-size: 38px; } .s-turnkey .cols { margin-top: 32px; } }
+
+/* ---------- Chacun y gagne : légende parfaitement lisible --------------- */
+.s-model .legend li { color: var(--fg); }
+.s-model .legend li b { color: var(--fg); }
+.s-model .legend li em { color: var(--fg); opacity: .92; }
+.s-model .legend li:not(.on) { color: rgba(28, 36, 24, .82); }
+
+/* ---------- Engagement : présence légère -------------------------------- */
+.s-cause .gift h4 { font-weight: 500; margin-bottom: calc(var(--u) * 1.2); }
+.s-cause .gift .light { font-family: var(--serif); font-weight: 300; font-size: calc(var(--u) * 1.75); line-height: 1.32; color: var(--fg); }
+.s-cause .gift ul { margin-top: calc(var(--u) * 2.4); }
+
+/* ---------- Fonctionnement : encadré « De votre côté » ------------------ */
+.s-turnkey .small li { line-height: 1.4; }
+
+/* ---------- Notre histoire : texte long ---------------------------------- */
+.s-story-long.has-ear .ear { width: 32%; }
+.s-story-long.has-ear .center { max-width: 64%; padding-top: 0; justify-content: flex-start; margin-top: calc(var(--u) * 2.2); }
+.s-story-long .lead { font-size: calc(var(--u) * 1.9); }
+.s-story-long.has-ear .title { font-size: calc(var(--u) * 3.6); line-height: 1.04; margin-top: calc(var(--u) * 1); }
+.s-story-long .story { columns: 2; column-gap: calc(var(--u) * 3.4); margin-top: calc(var(--u) * 2.2); font-size: calc(var(--u) * 1.02); line-height: 1.55; color: var(--fg); }
+.s-story-long .story p { break-inside: avoid; margin-bottom: .9em; }
+.s-story-long .closing { margin-top: calc(var(--u) * 1.4); font-family: var(--serif); font-style: italic; font-size: calc(var(--u) * 1.9); line-height: 1.22; padding-left: calc(var(--u) * 2); border-left: 1px solid var(--fg-20); }
+
+/* ---------- Étudiants : mission ------------------------------------------ */
+.s-people .body { font-size: var(--fs-s); color: var(--fg); }
+.s-people .mission { margin-top: calc(var(--u) * 1.2); font-size: var(--fs-s); line-height: 1.55; color: var(--fg-70); max-width: 44em; }
+
+/* ---------- Présence en magasin ------------------------------------------ */
+.s-presence .flow { list-style: none; margin-top: calc(var(--u) * 3.2); }
+.s-presence .flow li { display: grid; grid-template-columns: calc(var(--u) * 3.4) calc(var(--u) * 15) 1fr; align-items: baseline; gap: 0 calc(var(--u) * 1); padding: calc(var(--u) * 1) 0; border-top: 1px solid var(--fg-15); }
+.s-presence .flow li:last-child { border-bottom: 1px solid var(--fg-15); }
+.s-presence .flow em { font-style: normal; font-size: var(--fs-label); letter-spacing: .2em; color: var(--fg-40); font-weight: 500; }
+.s-presence .flow b { font-weight: 400; font-size: calc(var(--u) * 2); line-height: 1.1; }
+.s-presence .flow span { font-size: var(--fs-s); line-height: 1.45; color: var(--fg); }
+.s-presence .body { margin-top: auto; font-size: calc(var(--u) * 1.1); line-height: 1.6; color: var(--fg); }
+.s-presence .right { justify-content: flex-end; gap: 0; }
+.s-presence .kit { background: var(--kaki); color: #F2F0E8; padding: calc(var(--u) * 2.4); margin-bottom: calc(var(--u) * 2.6); }
+.s-presence .kit h4 { color: rgba(242, 240, 232, .7); margin-bottom: calc(var(--u) * 1); }
+.s-presence .kit ul { list-style: none; }
+.s-presence .kit li { padding: calc(var(--u) * .6) 0 calc(var(--u) * .6) 1.4em; border-top: 1px solid rgba(242, 240, 232, .14); font-size: var(--fs-s); line-height: 1.4; position: relative; }
+.s-presence .kit li::before { content: "—"; position: absolute; left: 0; color: #F5D4A5; }
+.s-presence .kit li:last-child { color: rgba(242, 240, 232, .72); font-style: italic; }
+.s-presence .opt { min-height: calc(var(--u) * 13); }
+
+/* ---------- Proposition : suivi ------------------------------------------ */
+.s-pilot .follow { font-size: var(--fs-body); line-height: 1.55; color: var(--fg); }
+
+@media (max-width: 900px), (max-aspect-ratio: 4/5) {
+  .s-story-long.has-ear .center { max-width: 100%; margin-top: 16px; }
+  .s-story-long.has-ear .ear { position: relative; width: 100%; height: 220px; inset: auto; order: -1; }
+  .s-story-long.has-ear .title { font-size: 34px; }
+  .s-story-long .story { columns: 1; font-size: 15px; }
+  .s-story-long .closing { font-size: 22px; }
+  .s-people .mission { font-size: 15px; }
+  .s-presence .flow li { grid-template-columns: 32px 1fr; }
+  .s-presence .flow span { grid-column: 2; margin-top: 4px; font-size: 15px; }
+  .s-presence .flow b { font-size: 22px; }
+  .s-presence .body { margin-top: 28px; font-size: 15px; }
+  .s-presence .kit { margin-top: 32px; padding: 22px; }
+  .s-presence .kit li { font-size: 15px; }
+  .s-cause .gift .light { font-size: 20px; }
+}
+.s-presence .flow li { grid-template-columns: calc(var(--u) * 3.4) 1fr; }
+.s-presence .flow li b { display: block; }
+.s-presence .flow li span { grid-column: 2; display: block; margin-top: .35em; font-family: var(--sans); font-style: normal; color: var(--fg-70); }
+.s-presence .flow li:last-child span, .s-presence .flow li:last-child b { font-family: inherit; }
+.s-presence .flow li:last-child b { font-family: var(--serif); }
+/* Ajustements d'équilibre */
+.s-turnkey .title { margin-top: calc(var(--u) * 1.6); }
+.s-turnkey .cols { margin-top: calc(var(--u) * 2.6); align-items: start; }
+.s-turnkey .big li { font-size: calc(var(--u) * 1.4); padding: calc(var(--u) * .4) 0; }
+.s-turnkey .small { padding: calc(var(--u) * 2); }
+.s-turnkey .small li { font-size: calc(var(--u) * 1.02); padding: calc(var(--u) * .5) 0; }
+.s-turnkey .small .note { margin-top: calc(var(--u) * 1.2); font-size: calc(var(--u) * 1.35); }
+.s-people .formula { row-gap: calc(var(--u) * .6); margin-top: calc(var(--u) * 2); }
+.s-people .formula .f b { font-size: calc(var(--u) * 3.2); }
+.s-pilot .why { font-size: var(--fs-body); color: var(--fg-70); line-height: 1.5; }
+.s-people .title { margin-top: calc(var(--u) * 2.6); }
+.s-model .legend li { font-size: calc(var(--u) * 1.12); }
+.s-presence .body { margin-top: calc(var(--u) * 2.4); }
+@media (max-width: 900px), (max-aspect-ratio: 4/5) {
+  .s-turnkey .big li { font-size: 19px; } .s-turnkey .small li { font-size: 15px; } .s-turnkey .small .note { font-size: 19px; }
+  .s-people .formula { grid-template-columns: repeat(2, 1fr); }
+  .s-model .legend li { font-size: 15px; }
+}
+/* Défilement libre + recalage doux (voir app.js) : pas de snap forcé */
+html { scroll-snap-type: none; }
+.slide { scroll-snap-align: none; }

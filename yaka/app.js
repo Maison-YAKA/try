@@ -148,7 +148,8 @@
           <p class="honesty r" style="--d:7">${fmt(CS.honesty)}</p>
         </div>
         <div class="gift r" style="--d:3">
-          <p class="quote serif">${fmt(CS.quote)}</p>
+          <h4 class="upper muted">${CS.lightTitle}</h4>
+          <p class="light">${fmt(CS.light)}</p>
           <ul>${CS.gifts.map(([h, t], i) => `<li class="r" style="--d:${4 + i}"><b class="serif">${h}</b><span>${t}</span></li>`).join("")}</ul>
         </div>
       </div>
@@ -157,16 +158,14 @@
   // Pourquoi cette cause (histoire familiale)
   const W = S.deaf;
   add("deaf", "ivory", W.nav, `
-    <section class="slide s-origin ivory${C.images.ear ? " has-ear" : ""}">
+    <section class="slide s-origin s-story-long ivory${C.images.ear ? " has-ear" : ""}">
       ${C.images.ear ? `<figure class="ear r-fade" style="--d:2"><img src="${C.images.ear}" alt="Une oreille dessinée par une foule de personnes"></figure>` : ""}
       ${label(next(), W.label)}
       <div class="center">
         <p class="lead serif italic r" style="--d:1">${fmt(W.lead)}</p>
         ${lines(W.title, "title serif", 2)}
-        <div class="cols">
-          <p class="body r" style="--d:6">${fmt(W.body)}</p>
-          <p class="closing r" style="--d:8">${fmt(W.closing)}</p>
-        </div>
+        <div class="story r" style="--d:6">${W.paragraphs.map((x) => `<p>${fmt(x)}</p>`).join("")}</div>
+        <p class="closing r" style="--d:8">${fmt(W.closing)}</p>
       </div>
       <svg class="wave" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M 0 60.0 L 5 72.0 L 10 82.1 L 15 86.5 L 20 82.8 L 25 71.3 L 30 55.1 L 35 39.1 L 40 28.7 L 45 27.5 L 50 36.2 L 55 52.2 L 60 70.5 L 65 85.3 L 70 92.1 L 75 89.1 L 80 77.8 L 85 62.2 L 90 47.4 L 95 37.9 L 100 35.9 L 105 41.1 L 110 50.8 L 115 61.5 L 120 69.8 L 125 73.5 L 130 72.6 L 135 68.4 L 140 62.9 L 145 58.1 L 150 55.3 L 155 54.7 L 160 55.7 L 165 57.6 L 170 59.5 L 175 61.1 L 180 62.1 L 185 62.6 L 190 62.5 L 195 61.6 L 200 60.0 L 205 57.7 L 210 55.3 L 215 53.9 L 220 54.3 L 225 56.9 L 230 61.6 L 235 66.9 L 240 71.1 L 245 72.3 L 250 69.6 L 255 63.3 L 260 55.0 L 265 47.4 L 270 43.1 L 275 43.8 L 280 49.6 L 285 58.8 L 290 68.6 L 295 75.9 L 300 78.3 L 305 75.2 L 310 67.8 L 315 58.4 L 320 50.2 L 325 45.5 L 330 45.4 L 335 49.6 L 340 56.2 L 345 62.9 L 350 67.8 L 355 69.5 L 360 68.3 L 365 64.9 L 370 60.9 L 375 57.7 L 380 56.0 L 385 55.9 L 390 57.0 L 395 58.6 L 400 60.0 L 405 61.0 L 410 61.4 L 415 61.3 L 420 61.0 L 425 60.4 L 430 59.8 L 435 59.1 L 440 58.5 L 445 58.2 L 450 58.5 L 455 59.4 L 460 61.0 L 465 62.6 L 470 63.8 L 475 63.9 L 480 62.7 L 485 60.3 L 490 57.4 L 495 54.9 L 500 53.8 L 505 54.5 L 510 57.1 L 515 60.7 L 520 64.2 L 525 66.5 L 530 66.9 L 535 65.2 L 540 61.9 L 545 58.3 L 550 55.4 L 555 54.0 L 560 54.5 L 565 56.6 L 570 59.3 L 575 61.9 L 580 63.6 L 585 63.9 L 590 63.1 L 595 61.6 L 600 59.9 L 605 58.7 L 610 58.1 L 615 58.3 L 620 58.8 L 625 59.6 L 630 60.2 L 635 60.5 L 640 60.6 L 645 60.5 L 650 60.3 L 655 60.1 L 660 59.9 L 665 59.8 L 670 59.7 L 675 59.7 L 680 59.8 L 685 60.0 L 690 60.2 L 695 60.4 L 700 60.5 L 705 60.4 L 710 60.2 L 715 59.9 L 720 59.6 L 725 59.4 L 730 59.3 L 735 59.5 L 740 59.8 L 745 60.2 L 750 60.4 L 755 60.6 L 760 60.5 L 765 60.3 L 770 60.1 L 775 59.9 L 780 59.8 L 785 59.8 L 790 59.8 L 795 59.9 L 800 60.0 L 805 60.0 L 810 60.0 L 815 60.0 L 820 60.0 L 825 60.0 L 830 60.0 L 835 60.0 L 840 60.0 L 845 60.0 L 850 60.0 L 855 60.0 L 860 60.0 L 865 60.0 L 870 60.0 L 875 60.0 L 880 60.0 L 885 60.0 L 890 60.0 L 895 60.0 L 900 60.0 L 905 60.0 L 910 60.0 L 915 60.0 L 920 60.0 L 925 60.0 L 930 60.0 L 935 60.0 L 940 60.0 L 945 60.0 L 950 60.0 L 955 60.0 L 960 60.0 L 965 60.0 L 970 60.0 L 975 60.0 L 980 60.0 L 985 60.0 L 990 60.0 L 995 60.0 L 1000 60.0 L 1005 60.0 L 1010 60.0 L 1015 60.0 L 1020 60.0 L 1025 60.0 L 1030 60.0 L 1035 60.0 L 1040 60.0 L 1045 60.0 L 1050 60.0 L 1055 60.0 L 1060 60.0 L 1065 60.0 L 1070 60.0 L 1075 60.0 L 1080 60.0 L 1085 60.0 L 1090 60.0 L 1095 60.0 L 1100 60.0 L 1105 60.0 L 1110 60.0 L 1115 60.0 L 1120 60.0 L 1125 60.0 L 1130 60.0 L 1135 60.0 L 1140 60.0 L 1145 60.0 L 1150 60.0 L 1155 60.0 L 1160 60.0 L 1165 60.0 L 1170 60.0 L 1175 60.0 L 1180 60.0 L 1185 60.0 L 1190 60.0 L 1195 60.0 L 1200 60.0"/></svg>
     </section>`);
@@ -212,56 +211,34 @@
           <div class="formula">${S.people.formula.map(([a, b], i) => `<div class="f r" style="--d:${1 + i}"><b>${a}</b><span class="upper muted">${b}</span></div>`).join("")}</div>
           ${lines(S.people.title, "title sans-title", 3)}
           <p class="body r" style="--d:6">${fmt(S.people.body)}</p>
+          <p class="mission r" style="--d:6">${fmt(S.people.mission)}</p>
           <div class="skills r" style="--d:7">${S.people.skills.map((s) => `<span>${s}</span>`).join("")}</div>
         </div>
         <div class="right">
-          <div class="frame r-fade" style="--d:2">${photo(C.images.student, S.people.photoCaption, "Étudiant Maison YAKA au stand")}</div>
+          <div class="frame r-fade" style="--d:2">${photo(C.images.student, S.people.photoCaption, "Étudiant Maison YAKA en magasin")}</div>
           <p class="quote serif italic r" style="--d:8">${fmt(S.people.quote)}</p>
           <p class="muted t-s r" style="--d:9;font-size:var(--fs-body)">${fmt(S.people.network)}</p>
         </div>
       </div>
     </section>`);
 
-  // Le terrain
-  const f = C.field;
-  add("proof", "kaki", S.proof.nav, `
-    <section class="slide s-proof kaki">
-      ${label(next(), S.proof.label)}
-      <div class="head">
-        ${lines(S.proof.title, "title", 1)}
-        <p class="claim serif italic h-m soft r" style="--d:3">${fmt(S.proof.claim)}</p>
-      </div>
-      <div class="hero">
-        <div class="stat target r" style="--d:2"><div class="v">${euro(`<span class="count" data-to="${f.target}">${f.target}</span>`)}</div><div class="k">Objectif initial<br>par vendeur</div></div>
-        <div class="stat big r" style="--d:3"><div class="v"><span class="tilde">~</span>${euro(`<span class="count" data-to="${f.average}">${f.average}</span>`)}</div><div class="k"><strong>CA moyen observé</strong> par vendeur</div></div>
-        <div></div>
-      </div>
-      <div class="row">
-        <div class="stat r" style="--d:5"><div class="v">${euro(`<span class="count" data-to="${f.founderRevenue}">${f.founderRevenue}</span>`)}</div><div class="k">Réalisés personnellement<br>par un porteur du projet</div></div>
-        <div class="stat r" style="--d:6"><div class="v">${euro(`<span class="count" data-to="${f.best}">${f.best}</span>`)}</div><div class="k">Meilleure performance<br>observée</div></div>
-        <div class="stat r" style="--d:7"><div class="v"><span class="count" data-to="${f.founderSales}">${f.founderSales}</span></div><div class="k">Ventes en une journée par un porteur<br>du projet — hypothèse initiale : ${f.salesHypothesis}</div></div>
-      </div>
-      <div class="foot r" style="--d:9">
-        <p>${fmt(f.disclaimer)}</p>
-        <p>Performance la plus faible observée : environ ${f.lowest}&#8239;€, malgré des difficultés avec le terminal de paiement.</p>
-      </div>
-    </section>`);
-
-  // Sur place (avec ou sans table)
-
-  add("meeting", "ivory", S.meeting.nav, `
-    <section class="slide s-meeting ivory">
+  // Notre présence en magasin (dispositif léger)
+  const MT = S.meeting;
+  add("meeting", "ivory", MT.nav, `
+    <section class="slide s-meeting s-presence ivory">
       <div class="grid">
         <div class="left">
-          ${label(next(), S.meeting.label)}
-          <div class="lines3">${S.meeting.lines.map((l, i) => `<div class="l serif r" style="--d:${1 + i * 2}"><em>0${i + 1}</em><span>${l}</span></div>`).join("")}</div>
-          <p class="body r" style="--d:7">${fmt(S.meeting.body)}</p>
-          <div class="qual r" style="--d:8">${S.meeting.qualities.map((q) => `<span>${q}</span>`).join("")}</div>
+          ${label(next(), MT.label)}
+          <ol class="flow">${MT.steps.map(([h, t], i) => `<li class="r" style="--d:${1 + i}"><em>0${i + 1}</em><b class="serif">${h}</b><span>${fmt(t)}</span></li>`).join("")}</ol>
+          <p class="body r" style="--d:6">${fmt(MT.body)}</p>
         </div>
         <div class="right">
-          ${C.images.onsite ? `<div class="frame r-fade" style="--d:2">${photo(C.images.onsite, "", "Le stand Maison YAKA en magasin")}</div>` : ""}
-          <h4 class="upper muted r" style="--d:3">${S.meeting.optionsTitle}</h4>
-          <div class="options">${S.meeting.options.map(([h, t], i) => `<div class="opt r" style="--d:${4 + i}"><em>${String.fromCharCode(65 + i)}</em><b class="serif">${h}</b><p>${fmt(t)}</p></div>`).join("")}</div>
+          <div class="kit r" style="--d:3">
+            <h4 class="upper muted">${MT.kitTitle}</h4>
+            <ul>${MT.kit.map((x) => `<li>${fmt(x)}</li>`).join("")}</ul>
+          </div>
+          <h4 class="upper muted r" style="--d:4">${MT.optionsTitle}</h4>
+          <div class="options">${MT.options.map(([h, t], i) => `<div class="opt r" style="--d:${5 + i}"><em>${String.fromCharCode(65 + i)}</em><b class="serif">${h}</b><p>${fmt(t)}</p></div>`).join("")}</div>
         </div>
       </div>
     </section>`);
@@ -278,7 +255,7 @@
       </div>
       <div class="bottom">
         <div class="r" style="--d:7"><h4 class="upper muted">${P.askTitle}</h4><ol class="steps">${P.asks.map((s, i) => `<li><em>0${i + 1}</em><span>${s}</span></li>`).join("")}</ol><p class="why muted">${fmt(P.askWhy)}</p></div>
-        <div class="r" style="--d:8"><h4 class="upper muted">${P.measureTitle}</h4><ul>${P.measures.map((m) => `<li>${m}</li>`).join("")}</ul></div>
+        <div class="r" style="--d:8"><h4 class="upper muted">${P.followTitle}</h4><p class="follow">${fmt(P.follow)}</p></div>
         <div class="final r" style="--d:9"><p class="serif italic">${fmt(P.line)}</p></div>
       </div>
     </section>`);
@@ -363,75 +340,36 @@
     try { history.replaceState(null, "", "#" + slides[i].id); } catch (e) { /* cadre restreint */ }
   }
 
-  /* ---------- Défilement fluide ------------------------------------------
-     Sur grand écran, chaque geste (molette, trackpad, clavier) fait avancer
-     d'exactement un écran, avec une courbe douce et sans à-coups d'inertie.
-     Sur mobile, le défilement natif au doigt est conservé. */
-  const deckMQ = matchMedia("(min-width: 901px) and (min-aspect-ratio: 4/5)");
+  /* ---------- Défilement ------------------------------------------------
+     Défilement natif du navigateur, calé écran par écran (scroll-snap CSS) :
+     molette, trackpad, doigt, clavier. Aucun défilement piloté en JavaScript. */
   const reduceMQ = matchMedia("(prefers-reduced-motion: reduce)");
-  const root = document.documentElement;
-  const isDeck = () => deckMQ.matches && !root.classList.contains("is-print");
-  const syncMode = () => root.classList.toggle("deck-mode", isDeck());
-  syncMode();
-  deckMQ.addEventListener?.("change", syncMode);
-
-  let anim = null;
-  const easeInOut = (t) => t < .5 ? 16 * t ** 5 : 1 - (-2 * t + 2) ** 5 / 2; // quintic
-  function scrollToY(y, dur) {
-    if (anim) cancelAnimationFrame(anim.raf);
-    const from = window.scrollY, dist = y - from;
-    if (Math.abs(dist) < 1 || reduceMQ.matches || !dur) { window.scrollTo(0, y); anim = null; return; }
-    const t0 = performance.now();
-    anim = { raf: 0 };
-    const step = (t) => {
-      const p = Math.min(1, (t - t0) / dur);
-      window.scrollTo(0, from + dist * easeInOut(p));
-      if (p < 1) anim.raf = requestAnimationFrame(step);
-      else { anim = null; lastAnimEnd = performance.now(); }
-    };
-    anim.raf = requestAnimationFrame(step);
-  }
-  let lastAnimEnd = 0;
-
   const go = (i) => {
     i = Math.max(0, Math.min(total - 1, i));
-    if (!isDeck()) { els[i].scrollIntoView({ behavior: reduceMQ.matches ? "auto" : "smooth", block: "start" }); return; }
-    const jump = Math.abs(i - current);
-    setCurrent(i);
-    enter(els[i]);
-    scrollToY(els[i].offsetTop, Math.min(1500, 1050 + (jump - 1) * 90));
+    els[i].scrollIntoView({ behavior: reduceMQ.matches ? "auto" : "smooth", block: "start" });
   };
 
-  // Molette / trackpad : un geste = un écran. Les événements d'inertie qui
-  // suivent un geste (espacés de moins de 160 ms) sont ignorés.
-  let lastWheel = 0, streamUsed = false;
-  window.addEventListener("wheel", (e) => {
-    if (!isDeck() || e.ctrlKey) return;
-    e.preventDefault();
-    const now = performance.now(), gap = now - lastWheel;
-    lastWheel = now;
-    if (gap > 160) streamUsed = false;
-    if (anim || streamUsed || Math.abs(e.deltaY) < 3) return;
-    streamUsed = true;
-    go(current + (e.deltaY > 0 ? 1 : -1));
-  }, { passive: false });
-
-  // Si l'utilisateur tire la barre de défilement, on se recale en douceur
-  let settle = 0;
+  // Grand écran : quand le défilement s'arrête entre deux écrans, on se recale
+  // doucement sur l'écran le plus proche.
+  const wideMQ = matchMedia("(min-width: 901px) and (min-aspect-ratio: 4/5)");
+  let settle = 0, anchor = 0;
   window.addEventListener("scroll", () => {
-    if (!isDeck() || anim) return;
     clearTimeout(settle);
+    if (!wideMQ.matches || document.documentElement.classList.contains("is-print")) return;
     settle = setTimeout(() => {
-      if (anim) return;
-      const i = Math.round(window.scrollY / innerHeight);
-      if (Math.abs(window.scrollY - els[i].offsetTop) > 2) { setCurrent(i); scrollToY(els[i].offsetTop, 600); }
-    }, 180);
+      const y = window.scrollY;
+      let best = 0;
+      els.forEach((el, k) => { if (Math.abs(el.offsetTop - y) < Math.abs(els[best].offsetTop - y)) best = k; });
+      // Un petit geste suffit pour quitter l'écran de départ
+      const d = y - els[anchor].offsetTop;
+      if (best === anchor && Math.abs(d) > innerHeight * 0.1) best = Math.max(0, Math.min(total - 1, anchor + Math.sign(d)));
+      anchor = best;
+      if (Math.abs(els[best].offsetTop - y) > 2) window.scrollTo({ top: els[best].offsetTop, behavior: reduceMQ.matches ? "auto" : "smooth" });
+    }, 220);
   }, { passive: true });
-  window.addEventListener("resize", () => { if (isDeck() && current >= 0) window.scrollTo(0, els[current].offsetTop); });
 
   // Écran courant = celui qui traverse le milieu de l'écran
   const centerObs = new IntersectionObserver((entries) => {
-    if (typeof anim !== "undefined" && anim) return; // pendant une transition pilotée, l'écran cible fait foi
     entries.forEach((e) => { if (e.isIntersecting) setCurrent(+e.target.dataset.index); });
   }, { rootMargin: "-50% 0px -50% 0px", threshold: 0 });
   // Révélation dès qu'un écran est visible à ~35 %

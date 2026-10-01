@@ -184,7 +184,7 @@
       <div class="cards">
         ${AS.items.map((it, i) => `
           <article class="asso-card r" style="--d:${4 + i}">
-            <div class="logo-box">${it.logo ? `<img src="${it.logo}" alt="Logo ${it.full}">` : `<span class="wordmark">${it.name}</span>`}</div>
+            <div class="logo-box"${it.logoBg ? ` style="background:${it.logoBg}"` : ""}>${it.logo ? `<img src="${it.logo}" alt="Logo ${it.full}">` : `<span class="wordmark">${it.name}</span>`}</div>
             <div class="tag upper">${it.tag}</div>
             <h3 class="serif">${it.full}</h3>
             <p>${fmt(it.text)}</p>

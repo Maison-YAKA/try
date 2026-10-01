@@ -165,16 +165,16 @@ window.YAKA_CONTENT = {
       nav: "Les associations",
       label: "Les associations",
       title: "Des causes qui\nnous tiennent à cœur.",
-      intro: "La surdité est au cœur de notre histoire. Au-delà, Maison YAKA souhaite soutenir des associations qui agissent pour les enfants, les familles et la santé.",
+      intro: "La surdité est au cœur de notre histoire. Au-delà, Maison YAKA souhaite soutenir des acteurs engagés pour les enfants, les familles et la planète.",
       items: [
         { name: "ANPEDA", full: "Fédération de parents d’enfants sourds ou malentendants", tag: "Surdité et malentendance", logo: "assets/asso-anpeda.png",
           text: "L’ANPEDA accompagne les familles et défend les droits des enfants sourds ou malentendants afin de favoriser leur inclusion, leur autonomie et leur épanouissement." },
         { name: "Petits Princes", full: "Association Petits Princes", tag: "Enfants malades", logo: "assets/asso-petits-princes.jpg",
           text: "L’Association Petits Princes réalise les rêves d’enfants et d’adolescents gravement malades afin de leur offrir des moments d’évasion, de joie et d’espoir pendant leur parcours de soins." },
-        { name: "FRM", full: "Fondation pour la Recherche Médicale", tag: "Recherche médicale", logo: "assets/asso-frm.jpg",
-          text: "La FRM soutient et finance la recherche médicale française sur de nombreuses maladies afin de faire progresser les connaissances, les traitements et, à terme, sauver des vies." },
+        { name: "Reforest’Action", full: "Reforest’Action", tag: "Forêts et environnement", logo: "assets/asso-reforest-action.jpg", logoBg: "#083F2C",
+          text: "Reforest’Action agit pour préserver et restaurer les forêts, en France et dans le monde, en accompagnant des projets de plantation et de reforestation." },
       ],
-      note: "Associations que Maison YAKA souhaite soutenir. Les modalités de soutien sont en cours de définition.",
+      note: "Structures que Maison YAKA souhaite soutenir. Les modalités de soutien sont en cours de définition.",
     },
 
     interlude: {

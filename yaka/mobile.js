@@ -63,7 +63,7 @@
       <h2 class="a" style="--d:2;margin-top:14px"><span class="h" style="font-size:34px">Des causes qui<br><em>nous tiennent à cœur.</em></span></h2>
       <p class="a" style="--d:3;margin-top:12px"><span class="p">${fmt(S.associations.intro)}</span></p>
       <div class="grow"></div>
-      <div ${a(4)}>${S.associations.items.map((it) => `<div class="asso"><div class="lg">${it.logo ? `<img src="${it.logo}" alt="Logo ${it.full}">` : `<span>${it.name}</span>`}</div><div><b>${it.full}</b><span>${it.text}</span></div></div>`).join("")}</div>
+      <div ${a(4)}>${S.associations.items.map((it) => `<div class="asso"><div class="lg"${it.logoBg ? ` style="background:${it.logoBg}"` : ""}>${it.logo ? `<img src="${it.logo}" alt="Logo ${it.full}">` : `<span>${it.name}</span>`}</div><div><b>${it.full}</b><span>${it.text}</span></div></div>`).join("")}</div>
       <p class="a" style="--d:5;margin-top:12px"><span class="small">${fmt(S.associations.note)}</span></p>`],
 
     // 6 · Le café

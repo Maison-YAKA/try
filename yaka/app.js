@@ -261,7 +261,7 @@
             <ul>${MT.kit.map((x) => `<li>${fmt(x)}</li>`).join("")}</ul>
           </div>
           <h4 class="upper muted r" style="--d:4">${MT.optionsTitle}</h4>
-          <div class="options">${MT.options.map(([h, t], i) => `<div class="opt r" style="--d:${5 + i}"><em>${String.fromCharCode(65 + i)}</em><b class="serif">${h}</b><p>${fmt(t)}</p></div>`).join("")}</div>
+          <div class="options">${MT.options.map(([h, t, img], i) => `<div class="opt ref r" style="--d:${5 + i}">${img ? `<img class="ref-img" src="${img}" alt="">` : ""}<b class="serif">${h}</b><p>${fmt(t)}</p></div>`).join("")}</div>
         </div>
       </div>
     </section>`);

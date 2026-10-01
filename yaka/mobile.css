@@ -252,3 +252,6 @@ html { scroll-snap-type: y proximity; }
 @media print { .asso .lg { height: 58px; padding: 5px; } .c-asso .asso { padding: 7px 0; gap: 5px; } .c-asso .asso b { font-size: 15px; } .c-asso .asso > div > span { font-size: 11px; line-height: 1.38; } .c-asso .h { font-size: 28px !important; } .c-asso .p { font-size: 13px; } }
 .asso .lg { height: 110px; padding: 8px; }
 @media print { .asso .lg { height: 60px; padding: 4px; } }
+/* Couleurs de texte uniformes */
+.c-engage .gain span { color: inherit; }
+.box.us li::before { color: inherit; opacity: .6; }

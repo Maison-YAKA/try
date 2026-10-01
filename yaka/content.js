@@ -219,8 +219,8 @@ window.YAKA_CONTENT = {
       kit: ["De son stock de café", "D’une petite pancarte Maison YAKA présentant la marque, le café et notre engagement", "D’un terminal de paiement fourni par Maison YAKA", "D’une petite table, uniquement si vous souhaitez en mettre une à disposition"],
       optionsTitle: "Nos deux références",
       options: [
-        ["Café en grains", "Sachet de 250 g · 14,90 €"],
-        ["Café en capsules", "Boîte de 20 capsules · 14,90 €"],
+        ["Café en grains", "Sachet de 250 g · 14,90 €", "assets/pack-grains.webp"],
+        ["Café en capsules", "Boîte de 20 capsules · 14,90 €", "assets/pack-capsules.webp"],
       ],
     },
 

@@ -1177,3 +1177,34 @@ html { scroll-snap-type: none; }
   .slide { height: calc(var(--u) * 56.25); min-height: 0; }
   body { background: var(--black); }
 }
+
+/* ---------- Présence en magasin : références avec le produit en fond --- */
+.s-presence .opt.ref, .s-presence .opt.ref:nth-child(2) { position: relative; overflow: hidden; background: var(--kaki); color: #F2F0E8; min-height: calc(var(--u) * 13); justify-content: flex-end; padding: calc(var(--u) * 2); }
+.s-presence .opt.ref .ref-img { position: absolute; right: -4%; top: -12%; height: 128%; width: auto; opacity: .5; pointer-events: none; }
+.s-presence .opt.ref::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(28,36,24,.92) 0%, rgba(28,36,24,.55) 55%, rgba(28,36,24,.1) 100%); z-index: 1; }
+.s-presence .opt.ref b, .s-presence .opt.ref p { position: relative; z-index: 2; color: #F2F0E8; }
+.s-presence .opt.ref b { margin-top: 0; }
+.s-presence .opt.ref p { opacity: .85; }
+/* Encadré matériel : tout le texte en blanc, une seule couleur */
+.s-presence .kit { padding: calc(var(--u) * 2); margin-bottom: calc(var(--u) * 2.2); }
+.s-presence .kit h4 { color: #F2F0E8; opacity: .75; }
+.s-presence .kit li, .s-presence .kit li:last-child { color: #F2F0E8; font-style: normal; }
+.s-presence .kit li::before { color: #F2F0E8; opacity: .5; }
+@media (max-width: 600px) { .s-presence .opt.ref { min-height: 150px; } }
+/* Page 10 : tout tient dans l'écran */
+.s-presence .grid { height: 100%; }
+.s-presence .right { min-height: 0; }
+.s-presence .kit { padding: calc(var(--u) * 1.6) calc(var(--u) * 2); margin-bottom: calc(var(--u) * 1.6); }
+.s-presence .kit li { font-size: calc(var(--u) * 1.05); padding: calc(var(--u) * .45) 0 calc(var(--u) * .45) 1.4em; }
+.s-presence .right h4 { margin-bottom: calc(var(--u) * 1); }
+.s-presence .opt.ref, .s-presence .opt.ref:nth-child(2) { min-height: calc(var(--u) * 11); padding: calc(var(--u) * 1.6); }
+.s-presence .flow li { padding: calc(var(--u) * .8) 0; }
+.s-presence .body { font-size: calc(var(--u) * 1.05); }
+/* Couleurs de texte uniformes : pas d'accent doré ou brun dans les listes */
+.s-turnkey .big li.us b { color: var(--fg-70); }
+.s-cause .gift li b { color: var(--fg); }
+.s-presence .right { justify-content: center; }
+.s-presence .kit li { font-size: calc(var(--u) * 1.12); }
+.s-presence .opt.ref, .s-presence .opt.ref:nth-child(2) { min-height: calc(var(--u) * 16); }
+.s-presence .opt.ref .ref-img { opacity: .62; height: 120%; top: -8%; right: 2%; }
+.s-presence .opt.ref::before { background: linear-gradient(90deg, rgba(28,36,24,.88) 0%, rgba(28,36,24,.45) 55%, rgba(28,36,24,0) 100%); }

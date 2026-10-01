@@ -48,7 +48,7 @@
   next();
   add("cover", "black", S.cover.nav, `
     <section class="slide s-cover" data-theme="black">
-      <div class="photo hero"><picture><source media="(max-width: 900px), (max-aspect-ratio: 4/5)" srcset="${C.images.packFront}"><img src="${C.images.hero}" alt="YAKA, 100 % Arabica : le paquet posé sur des rochers et des grains de café"></picture></div>
+      <div class="photo hero"><picture><source media="(max-width: 600px)" srcset="${C.images.packFront}"><img src="${C.images.hero}" alt="YAKA, 100 % Arabica : le paquet posé sur des rochers et des grains de café"></picture></div>
       <div class="hero-copy">
         <p class="eyebrow r" style="--d:6">${fmt(S.cover.eyebrow)}</p>
         ${lines(S.cover.headline, "headline serif", 7)}
@@ -374,7 +374,7 @@
 
   // Grand écran : quand le défilement s'arrête entre deux écrans, on se recale
   // doucement sur l'écran le plus proche.
-  const wideMQ = matchMedia("(min-width: 901px) and (min-aspect-ratio: 4/5)");
+  const wideMQ = matchMedia("(min-width: 601px) and (min-aspect-ratio: 1/1)");
   let settle = 0, anchor = 0;
   window.addEventListener("scroll", () => {
     clearTimeout(settle);

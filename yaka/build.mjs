@@ -58,7 +58,7 @@ fs.copyFileSync(mobOut, path.join(root, "..", "yaka-mobile.html"));
 console.log("MOBILE :", path.relative(process.cwd(), mobOut), (fs.statSync(mobOut).size / 1024).toFixed(0) + " Ko");
 // Sur la version en ligne, les téléphones sont redirigés vers la version stories
 fs.writeFileSync(path.join(root, "..", "yaka.html"), html.replace(/(<meta name="viewport"[^>]*>)/, `$1
-<script>if (!/[?&](desktop|print)/.test(location.search) && (matchMedia("(max-width: 820px) and (orientation: portrait)").matches || (screen.width <= 820 && screen.height > screen.width))) location.replace("yaka-mobile.html" + location.hash);</script>`));
+<script>if (!/[?&](desktop|print)/.test(location.search) && Math.min(screen.width, screen.height) < 600) location.replace("yaka-mobile.html" + location.hash);</script>`));
 
 if (!process.argv.includes("--no-pdf")) {
   let chromium;

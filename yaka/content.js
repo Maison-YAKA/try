@@ -33,7 +33,7 @@ window.YAKA_CONTENT = {
   ],
 
   /* Adresse utilisée par le bouton final. null → le bouton renvoie aux contacts. */
-  ctaEmail: "contact@webonestudio.fr",
+  ctaEmail: null,
   contactEmail: "contact@webonestudio.fr",
 
   /* Site de la marque (affiché sur l’écran contact) */

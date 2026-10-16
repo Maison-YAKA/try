@@ -321,7 +321,7 @@ window.YAKA_CONTENT = {
   ],
 
   /* Adresse utilisée par le bouton final. null → le bouton renvoie aux contacts. */
-  ctaEmail: "contact@webonestudio.fr",
+  ctaEmail: null,
   contactEmail: "contact@webonestudio.fr",
 
   /* Site de la marque (affiché sur l’écran contact) */
@@ -664,7 +664,7 @@ window.YAKA_CONTENT = {
       <div ${a(4)}><div class="btns">
         ${C.ctaEmail ? `<a class="btn gold" href="mailto:${C.ctaEmail}?subject=${encodeURIComponent("Accueillir Maison YAKA dans notre magasin")}">${S.cta.button} <small>${C.ctaEmail}</small></a>` : ""}
         ${C.founders[0].phone ? `<a class="btn" href="tel:${tel(C.founders[0].phone)}">Appeler Yanil <small>${C.founders[0].phone}</small></a>` : ""}
-        ${C.founders.map((p) => `<a class="btn" href="mailto:${p.email}">Écrire à ${p.name.split(" ")[0]} <small>${p.email}</small></a>`).join("")}
+        
         ${C.website ? `<a class="btn" href="https://${C.website}" target="_blank" rel="noopener">Notre site <small>${C.website}</small></a>` : ""}
       </div></div>`],
   ];

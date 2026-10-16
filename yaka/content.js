@@ -46,7 +46,6 @@ window.YAKA_CONTENT = {
     logoGold: "assets/logo-or.webp",        // logo Maison YAKA doré
     packFront: "assets/recolte-mobile.webp", // couverture sur téléphone
     packBack: "assets/pack-grains.webp",    // sachet de grains 250 g (détouré)
-    packCaps: "assets/pack-capsules.webp",  // boîte de 20 capsules (détourée)
     beans: "assets/recolte.webp",           // récolte des cerises de café, vue aérienne
     student: "assets/etudiant.webp",        // étudiant Maison YAKA en magasin
     ear: "assets/oreille.jpg",              // oreille formée par une foule
@@ -61,20 +60,19 @@ window.YAKA_CONTENT = {
     roast: "Medium-dark",
     products: [
       { name: "Café en grains", format: "Sachet 250 g", price: "14,90 €", note: "Sachet à valve fraîcheur dégazante" },
-      { name: "Café en capsules", format: "Boîte de 20 capsules", price: "14,90 €", note: "Capsules operculées une à une" },
     ],
-    form: "Grains 250 g · 20 capsules",
+    form: "Grains 250 g",
     weight: "250 g",
     price: "14,90 € TTC",
     priceLabel: "Prix public",
-    usage: "Grains : espresso, machine automatique, italienne, filtre, piston · Capsules : espresso",
+    usage: "Espresso, machine automatique, italienne, filtre, piston",
     profile: ["Doux", "Chocolaté", "Medium-dark"],
   },
 
   /* ---------- L'association ---------------------------------------------- */
   cause: {
     audience: "les personnes sourdes et malentendantes",
-    status: "Démarche en construction, modalités à définir ensemble",
+    status: "ANPEDA · Association Petits Princes · Reforest’Action",
     partnerName: null,          // à renseigner uniquement lorsqu’un partenariat sera officiel
   },
 
@@ -117,7 +115,7 @@ window.YAKA_CONTENT = {
       yakaTitle: "Une journée Maison YAKA, en cinq étapes",
       yaka: [
         { who: "Votre magasin", what: "met à disposition un petit emplacement" },
-        { who: "Maison YAKA",   what: "installe sa pancarte et ses références" },
+        { who: "Maison YAKA",   what: "installe sa pancarte et son café" },
         { who: "Un étudiant",   what: "présente Maison YAKA, raconte notre café et va à la rencontre de vos clients" },
         { who: "Maison YAKA",   what: "gère l’encaissement, avec son propre terminal" },
         { who: "Maison YAKA",   what: "range et libère l’emplacement" },
@@ -136,10 +134,10 @@ window.YAKA_CONTENT = {
       label: "Notre engagement",
       title: "Votre magasin\nprend aussi part\nà notre engagement.",
       body: "En accueillant Maison YAKA, votre magasin participe concrètement à la dynamique qui nous permet de collecter des fonds et de développer notre engagement autour de la surdité et de la malentendance.",
-      statusLabel: "Statut",
-      honesty: "Cette démarche se construit avec nos partenaires ; ses modalités peuvent être discutées avec vous.",
+      statusLabel: "Nous soutenons",
+      honesty: "Ces trois structures sont présentées plus loin dans ce document.",
       lightTitle: "Une présence volontairement légère",
-      light: "Un étudiant, quelques références, notre pancarte Maison YAKA et un terminal de paiement. Aucune installation lourde n’est nécessaire. Si vous disposez d’une petite table, elle peut simplement servir de support ; dans le cas contraire, nous adaptons notre présence à votre espace.",
+      light: "Un étudiant, son stock de café, notre pancarte Maison YAKA et un terminal de paiement. Aucune installation lourde n’est nécessaire. Si vous disposez d’une petite table, elle peut simplement servir de support ; dans le cas contraire, nous adaptons notre présence à votre espace.",
       gifts: [
         ["Une opportunité", "pour un étudiant"],
         ["Une découverte", "pour vos clients"],
@@ -165,7 +163,7 @@ window.YAKA_CONTENT = {
       nav: "Les associations",
       label: "Les associations",
       title: "Des causes qui\nnous tiennent à cœur.",
-      intro: "La surdité est au cœur de notre histoire. Au-delà, Maison YAKA souhaite soutenir des acteurs engagés pour les enfants, les familles et la planète.",
+      intro: "La surdité est au cœur de notre histoire. Au-delà, Maison YAKA soutient des acteurs engagés pour les enfants, les familles et la planète.",
       items: [
         { name: "ANPEDA", full: "Fédération de parents d’enfants sourds ou malentendants", tag: "Surdité et malentendance", logo: "assets/asso-anpeda.png",
           text: "L’ANPEDA accompagne les familles et défend les droits des enfants sourds ou malentendants afin de favoriser leur inclusion, leur autonomie et leur épanouissement." },
@@ -174,7 +172,6 @@ window.YAKA_CONTENT = {
         { name: "Reforest’Action", full: "Reforest’Action", tag: "Forêts et environnement", logo: "assets/asso-reforest-action.jpg", logoBg: "#083F2C",
           text: "Reforest’Action agit pour préserver et restaurer les forêts, en France et dans le monde, en accompagnant des projets de plantation et de reforestation." },
       ],
-      note: "Structures que Maison YAKA souhaite soutenir. Les modalités de soutien sont en cours de définition.",
     },
 
     interlude: {
@@ -188,14 +185,14 @@ window.YAKA_CONTENT = {
     product: {
       nav: "Le café",
       label: "Le café",
-      title: "Deux références,\nun même assemblage.",
-      promise: "Un profil doux et chocolaté, accessible à tous les amateurs de café.\nDeux formats simples : grains et capsules.",
+      title: "Notre café\nen grains.",
+      promise: "Un profil doux et chocolaté, accessible à tous les amateurs de café.\nUn sachet de 250 g, pour l’espresso, le filtre ou la machine à grains.",
     },
 
     people: {
       nav: "Les étudiants",
       label: "Les étudiants",
-      formula: [["1", "étudiant"], ["1", "pancarte"], ["2", "références"], ["1", "samedi"]],
+      formula: [["1", "étudiant"], ["1", "pancarte"], ["1", "café premium"], ["1", "samedi"]],
       title: "Faire grandir\nles talents.",
       body: "Sur place, un étudiant va à la rencontre de vos clients, présente Maison YAKA et raconte notre café. Il est rémunéré et accompagné par Maison YAKA.",
       mission: "Chaque étudiant arrive avec un stock défini pour sa journée, autour d’une soixantaine de paquets selon l’organisation retenue. Il ne s’agit pas de lui mettre une pression artificielle, mais de lui confier une vraie mission commerciale, concrète et mesurable, où chaque vente fait avancer le projet et l’engagement de Maison YAKA.",
@@ -212,15 +209,14 @@ window.YAKA_CONTENT = {
         ["Un étudiant", "Il va à la rencontre de vos clients."],
         ["Le café et l’histoire", "Il présente Maison YAKA, explique notre café et raconte notre engagement."],
         ["L’échange", "Il échange simplement avec le client et répond à ses questions."],
-        ["La vente", "Le client peut ensuite acheter l’une de nos références."],
+        ["La vente", "Le client peut ensuite acheter notre café."],
       ],
       body: "Chaque étudiant est formé avant sa présence en magasin : connaissance du café, histoire de Maison YAKA, engagement et approche client. Notre dispositif reste volontairement épuré afin de créer un échange naturel, sans perturber le fonctionnement du magasin. Quelques minutes de conversation, la découverte d’un café et d’une histoire : un moment simple qui fait avancer un projet plus grand.",
       kitTitle: "L’étudiant dispose simplement",
       kit: ["De son stock de café", "D’une petite pancarte Maison YAKA présentant la marque, le café et notre engagement", "D’un terminal de paiement fourni par Maison YAKA", "D’une petite table, uniquement si vous souhaitez en mettre une à disposition"],
-      optionsTitle: "Nos deux références",
+      optionsTitle: "Notre café",
       options: [
         ["Café en grains", "Sachet de 250 g · 14,90 €", "assets/pack-grains.webp"],
-        ["Café en capsules", "Boîte de 20 capsules · 14,90 €", "assets/pack-capsules.webp"],
       ],
     },
 
@@ -229,7 +225,7 @@ window.YAKA_CONTENT = {
       label: "Notre proposition",
       titleGeneric: "Construisons\nun partenariat.",
       titlePartner: "Construisons\nun partenariat à {city}.",
-      formula: [["1", "petit emplacement"], ["1", "étudiant formé"], ["2", "références"], ["1", "rendez-vous régulier, le samedi"]],
+      formula: [["1", "petit emplacement"], ["1", "étudiant formé"], ["1", "café premium"], ["1", "rendez-vous régulier, le samedi"]],
       askTitle: "Ce que nous recherchons",
       asks: [
         "Un petit emplacement dans une zone passante : hall, sas d’entrée ou de sortie, ou tout espace convenu avec vous",
@@ -252,8 +248,8 @@ window.YAKA_CONTENT = {
     cta: {
       nav: "Contact",
       title: "Accueillez Maison YAKA\ndans votre magasin.",
-      body: "Proposez-nous un emplacement et une date : nous organisons le reste avec vous.",
-      button: "Proposer une date",
+      body: "Construisons ensemble une présence régulière dans votre magasin : nous organisons le reste avec vous.",
+      button: "Nous contacter",
     },
   },
 };

@@ -262,3 +262,4 @@ html { scroll-snap-type: y proximity; }
 .big, .c-engage .gain span, .box.us li::before { color: inherit; }
 .tags span, .card.sand .tags span { color: inherit; border-color: currentColor; opacity: .85; }
 .btn.gold { background: var(--ivory); border-color: var(--ivory); color: var(--ink); }
+.c-coffee .pack img { max-height: 400px; }

@@ -133,7 +133,7 @@
       </div>
     </section>`);
 
-  // Notre engagement (en construction : aucun montant ni partenaire annoncé)
+  // Notre engagement (aucun montant annoncé)
   const CA = C.cause, CS = S.cause;
   add("cause", "kaki", CS.nav, `
     <section class="slide s-cause kaki">
@@ -190,7 +190,6 @@
             <p>${fmt(it.text)}</p>
           </article>`).join("")}
       </div>
-      <p class="note r" style="--d:8">${fmt(AS.note)}</p>
     </section>`);
 
   // Quatre terres (respiration photo, comme le site)
@@ -208,7 +207,7 @@
   const cf = C.coffee;
   add("product", "black", S.product.nav, `
     <section class="slide s-product">
-      <div class="photo pack duo"><img src="${C.images.packBack}" alt="Sachet de café en grains Maison YAKA 250 g"><img src="${C.images.packCaps}" alt="Boîte de 20 capsules Maison YAKA"></div>
+      <div class="photo pack"><img src="${C.images.packBack}" alt="Sachet de café en grains Maison YAKA 250 g"></div>
       <div class="info">
         ${label(next(), S.product.label)}
         ${lines(S.product.title, "title serif")}
@@ -218,7 +217,8 @@
           <dl>
             ${cf.products.map((pr) => `<dt>${pr.name}</dt><dd>${pr.format} · <b class="price">${pr.price}</b></dd>`).join("")}
             <dt>Café</dt><dd>${cf.type} · ${cf.blend.toLowerCase()}</dd>
-            <dt>Fraîcheur</dt><dd>Sachet à valve dégazante · capsules operculées une à une</dd>
+            <dt>Usage</dt><dd>${cf.usage}</dd>
+            <dt>Fraîcheur</dt><dd>Sachet à valve dégazante</dd>
             <dt>Torréfaction</dt><dd>${cf.roast}</dd>
           </dl>
         </div>

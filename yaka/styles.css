@@ -1221,3 +1221,6 @@ html { scroll-snap-type: none; }
 .slide.ivory .todo, .slide.sand .todo { color: var(--fg-70); }
 .s-presence .kit li::before { color: #F2F0E8; }
 .s-cover .eyebrow { color: var(--fg); opacity: .8; }
+/* Une seule référence (grains) : carte pleine largeur */
+.s-presence .options { grid-template-columns: 1fr; }
+.s-presence .opt.ref .ref-img { right: 6%; }

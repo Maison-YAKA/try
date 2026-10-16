@@ -28,7 +28,7 @@ window.YAKA_CONTENT = {
   partner: null,
 
   founders: [
-    { name: "Yanil Bey-Omar", role: "Cofondateur", image: "assets/yanil.jpg", phone: "06 17 99 14 80", email: "yanil@webonestudio.fr" },
+    { name: "Yanil Bey-Omar", role: "Cofondateur", image: "assets/yanil.jpg", phone: null, email: "yanil@webonestudio.fr" },
     { name: "Arthur Mignon",  role: "Cofondateur", image: "assets/arthur.jpg", phone: null, email: "arthur@webonestudio.fr" },
   ],
 

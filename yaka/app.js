@@ -318,7 +318,7 @@
         <a class="btn r" style="--d:6" href="${mail}">${S.cta.button}<span class="arr"></span></a>
         <div class="contacts r" id="contacts" style="--d:7">
           ${C.website ? `<div class="c"><div class="n">Le site</div><div class="m"><a href="https://${C.website}" target="_blank" rel="noopener">${C.website}</a></div></div>` : ""}
-          ${C.founders.map((p) => `<div class="c"><div class="n">${p.name}</div><div class="m">${[p.role, p.phone && `<a href="tel:${p.phone.replace(/\s/g, "")}">${p.phone}</a>`, p.email && `<a href="mailto:${p.email}">${p.email}</a>`].filter(Boolean).join("<br>")}</div></div>`).join("")}
+          ${C.founders.filter((p) => p.phone).map((p) => `<div class="c"><div class="n">${p.name}</div><div class="m">${[p.role, `<a href="tel:${p.phone.replace(/\s/g, "")}">${p.phone}</a>`].join("<br>")}</div></div>`).join("")}
         </div>
       </div>
     </section>`);

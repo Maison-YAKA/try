@@ -45,7 +45,7 @@
       <p class="a" style="--d:4;margin-top:8px"><span class="p">${fmt(S.cause.light)}</span></p>
       <div class="grow"></div>
       <div ${a(5)}>${S.cause.gifts.map(([h, t]) => `<div class="gain"><span>${h}</span><b>${t}</b></div>`).join("")}</div>
-      <p class="a" style="--d:6;margin-top:14px"><span class="small">${fmt(S.cause.honesty)}</span></p>`],
+      <p class="a" style="--d:6;margin-top:14px"><span class="small">Nous soutenons l’ANPEDA, l’Association Petits Princes et Reforest’Action.</span></p>`],
 
     // 5 · Notre histoire
     ["ivory", "deaf", `
@@ -64,14 +64,14 @@
       <p class="a" style="--d:3;margin-top:12px"><span class="p">${fmt(S.associations.intro)}</span></p>
       <div class="grow"></div>
       <div ${a(4)}>${S.associations.items.map((it) => `<div class="asso"><div class="lg"${it.logoBg ? ` style="background:${it.logoBg}"` : ""}>${it.logo ? `<img src="${it.logo}" alt="Logo ${it.full}">` : `<span>${it.name}</span>`}</div><div><b>${it.full}</b><span>${it.text}</span></div></div>`).join("")}</div>
-      <p class="a" style="--d:5;margin-top:12px"><span class="small">${fmt(S.associations.note)}</span></p>`],
+      `],
 
     // 6 · Le café
     ["dark", "coffee", `
       <p ${a(1)}><span class="eyebrow">Le café</span></p>
-      <div class="pack duo a" style="--d:2"><img src="${I.packBack}" alt="Sachet de grains Maison YAKA 250 g"><img src="${I.packCaps}" alt="Boîte de 20 capsules Maison YAKA"></div>
+      <div class="pack a" style="--d:2"><img src="${I.packBack}" alt="Sachet de grains Maison YAKA 250 g"></div>
       <div class="stack">
-        <h2 ${a(3)}><span class="h" style="font-size:32px">Deux références,<br><em>un même assemblage.</em></span></h2>
+        <h2 ${a(3)}><span class="h" style="font-size:32px">Notre café<br><em>en grains.</em></span></h2>
         <div ${a(4)}><div class="tags">${cf.products.map((p) => `<span>${p.format} · ${p.price}</span>`).join("")}</div></div>
         <p ${a(5)}><span class="small">100&#8239;% Arabica · Brésil, Pérou, Colombie, Éthiopie · medium-dark · profil doux et chocolaté</span></p>
       </div>`],
